@@ -1,0 +1,904 @@
+\documentclass[11pt, letterpaper, onecolumn]{article}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{fixltx2e}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{jneurosci}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algcompatible}% http://ctan.org/pkg/algorithmicx
+\algnewcommand\algorithmicreturn{\textbf{return}}
+\algnewcommand\RETURN{\State \algorithmicreturn}%
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\textheight 9in
+\textwidth 6.5in
+\topmargin 0in % Length of margin at top of page above all printing. 1 inch is added to this value. 
+\headheight 0in
+\headsep 0in % Distance from bottom of header to the body of text on a page. 
+\oddsidemargin 0in
+\evensidemargin 0in
+\marginparsep 0in
+\marginparwidth 0in
+\footskip 0.5in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newfont{\bbb}{msbm10 scaled 500}
+\newcommand{\CCC}{\mbox{\bbb C}}
+\newfont{\bb}{msbm10 scaled 1100}
+\newcommand{\CC}{\mbox{\bb C}}
+\newcommand{\RR}{\mbox{\bb R}}
+\newcommand{\ZZ}{\mbox{\bb Z}}
+\newcommand{\FF}{\mbox{\bb F}}
+\newcommand{\GG}{\mbox{\bb G}}
+\newcommand{\EE}{\mbox{\bb E}}
+\newcommand{\NN}{\mbox{\bb N}}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\Prob}{\textrm{Pr}}
+
+% Vectors
+
+\newcommand{\av}{{\bf a}}
+\newcommand{\bv}{{\bf b}}
+\newcommand{\cv}{{\bf c}}
+\newcommand{\dv}{{\bf d}}
+\newcommand{\ev}{{\bf e}}
+\newcommand{\fv}{{\bf f}}
+\newcommand{\gv}{{\bf g}}
+\newcommand{\hv}{{\bf h}}
+\newcommand{\iv}{{\bf i}}
+\newcommand{\jv}{{\bf j}}
+\newcommand{\kv}{{\bf k}}
+\newcommand{\lv}{{\bf l}}
+\newcommand{\mv}{{\bf m}}
+\newcommand{\nv}{{\bf n}}
+\newcommand{\ov}{{\bf o}}
+\newcommand{\pv}{{\bf p}}
+\newcommand{\qv}{{\bf q}}
+\newcommand{\rv}{{\bf r}}
+\newcommand{\sv}{{\bf s}}
+\newcommand{\tv}{{\bf t}}
+\newcommand{\uv}{{\bf u}}
+\newcommand{\wv}{{\bf w}}
+\newcommand{\vv}{{\bf v}}
+\newcommand{\xv}{{\bf x}}
+\newcommand{\yv}{{\bf y}}
+\newcommand{\zv}{{\bf z}}
+\newcommand{\zerov}{{\bf 0}}
+\newcommand{\onev}{{\bf 1}}
+
+% Matrices
+
+\newcommand{\Am}{{\bf A}}
+\newcommand{\Bm}{{\bf B}}
+\newcommand{\Cm}{{\bf C}}
+\newcommand{\Dm}{{\bf D}}
+\newcommand{\Em}{{\bf E}}
+\newcommand{\Fm}{{\bf F}}
+\newcommand{\Gm}{{\bf G}}
+\newcommand{\Hm}{{\bf H}}
+\newcommand{\Id}{{\bf I}}
+\newcommand{\Jm}{{\bf J}}
+\newcommand{\Km}{{\bf K}}
+\newcommand{\Lm}{{\bf L}}
+\newcommand{\Mm}{{\bf M}}
+\newcommand{\Nm}{{\bf N}}
+\newcommand{\Om}{{\bf O}}
+\newcommand{\Pm}{{\bf P}}
+\newcommand{\Qm}{{\bf Q}}
+\newcommand{\Rm}{{\bf R}}
+\newcommand{\Sm}{{\bf S}}
+\newcommand{\Tm}{{\bf T}}
+\newcommand{\Um}{{\bf U}}
+\newcommand{\Wm}{{\bf W}}
+\newcommand{\Vm}{{\bf V}}
+\newcommand{\Xm}{{\bf X}}
+\newcommand{\Ym}{{\bf Y}}
+\newcommand{\Zm}{{\bf Z}}
+
+% Calligraphic
+
+\newcommand{\Ac}{{\cal A}}
+\newcommand{\Bc}{{\cal B}}
+\newcommand{\Cc}{{\cal C}}
+\newcommand{\Dc}{{\cal D}}
+\newcommand{\Ec}{{\cal E}}
+\newcommand{\Fc}{{\cal F}}
+\newcommand{\Gc}{{\cal G}}
+\newcommand{\Hc}{{\cal H}}
+\newcommand{\Ic}{{\cal I}}
+\newcommand{\Jc}{{\cal J}}
+\newcommand{\Kc}{{\cal K}}
+\newcommand{\Lc}{{\cal L}}
+\newcommand{\Mc}{{\cal M}}
+\newcommand{\Nc}{{\cal N}}
+\newcommand{\Oc}{{\cal O}}
+\newcommand{\Pc}{{\cal P}}
+\newcommand{\Qc}{{\cal Q}}
+\newcommand{\Rc}{{\cal R}}
+\newcommand{\Sc}{{\cal S}}
+\newcommand{\Tc}{{\cal T}}
+\newcommand{\Uc}{{\cal U}}
+\newcommand{\Wc}{{\cal W}}
+\newcommand{\Vc}{{\cal V}}
+\newcommand{\Xc}{{\cal X}}
+\newcommand{\Yc}{{\cal Y}}
+\newcommand{\Zc}{{\cal Z}}
+
+% Bold greek letters
+
+\newcommand{\alphav}{\hbox{\boldmath$\alpha$}}
+\newcommand{\betav}{\hbox{\boldmath$\beta$}}
+\newcommand{\gammav}{\hbox{\boldmath$\gamma$}}
+\newcommand{\deltav}{\hbox{\boldmath$\delta$}}
+\newcommand{\etav}{\hbox{\boldmath$\eta$}}
+\newcommand{\lambdav}{\hbox{\boldmath$\lambda$}}
+\newcommand{\epsilonv}{\hbox{\boldmath$\epsilon$}}
+\newcommand{\nuv}{\hbox{\boldmath$\nu$}}
+\newcommand{\muv}{\hbox{\boldmath$\mu$}}
+\newcommand{\zetav}{\hbox{\boldmath$\zeta$}}
+\newcommand{\phiv}{\hbox{\boldmath$\phi$}}
+\newcommand{\psiv}{\hbox{\boldmath$\psi$}}
+\newcommand{\thetav}{\hbox{\boldmath$\theta$}}
+\newcommand{\tauv}{\hbox{\boldmath$\tau$}}
+\newcommand{\omegav}{\hbox{\boldmath$\omega$}}
+\newcommand{\xiv}{\hbox{\boldmath$\xi$}}
+\newcommand{\sigmav}{\hbox{\boldmath$\sigma$}}
+\newcommand{\piv}{\hbox{\boldmath$\pi$}}
+\newcommand{\rhov}{\hbox{\boldmath$\rho$}}
+
+\newcommand{\Gammam}{\hbox{\boldmath$\Gamma$}}
+\newcommand{\Lambdam}{\hbox{\boldmath$\Lambda$}}
+\newcommand{\Deltam}{\hbox{\boldmath$\Delta$}}
+\newcommand{\Sigmam}{\hbox{\boldmath$\Sigma$}}
+\newcommand{\Phim}{\hbox{\boldmath$\Phi$}}
+\newcommand{\Pim}{\hbox{\boldmath$\Pi$}}
+\newcommand{\Psim}{\hbox{\boldmath$\Psi$}}
+\newcommand{\Thetam}{\hbox{\boldmath$\Theta$}}
+\newcommand{\Omegam}{\hbox{\boldmath$\Omega$}}
+\newcommand{\Xim}{\hbox{\boldmath$\Xi$}}
+
+
+
+% Colors
+\definecolor{emph}{rgb}{0.61,0.00,0.00}
+% Highlight Text:
+\newcommand\htext[1]{\textbf{\textcolor{emph}{#1}}}
+%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%To get the title ``references'' to not appear on the bibliography section
+\renewcommand{\refname}{\vspace{-0.25in}}
+\newcounter{task}
+\setcounter{task}{1}
+\newcommand{\task}{Task \#\arabic{task}\addtocounter{task}{1}}
+
+
+\title{Path Learning Using Different Scale Grid and Place Cells}
+\author{Irmak Aykin}
+\maketitle
+
+\newpage
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Mammalian spatial navigation is central to most behaviors and requires an understanding of the environment at multiple spatial scales (refs in humans and rats). How these scales are established during development and how they are used when an animal forages or learns a specific spatial layout are essentially unknown.
+The neural substrate of spatial navigation in the rodent has been extensively studied, and several types of neurons have been found that encode specific features potentially useful for spatial navigation.
+
+Place cells are located in the Hippocampus and have active firing fields at specific locations in 2 dimensional space, called 'place fields' \cite{Keefe:hippocampus78}. Grid cells, on the other hand, are located in the adjacent Medial Entorhinal Cortex(MEC) and they show periodic firing as a function of location. Specifically, a grid cell is activated whenever the animal traverses through any vertex of a regular grid of equilateral triangles that span the environment \cite{Hafting:Microstructure05}. Both grid and place cells are organized from dorsal to ventral levels in increasing spatial field sizes. The size gradient seems to be smooth for place cells (ref), but has been shown to be modular for grid cells (ref). Place and grid cells are functionally reciprocally connected in an ordered fashion, within each level (ref).
+
+Grid cells can be defined by three parameters: period, orientation and phase. The period of a grid cell can be defined as the spacing between the peak points of two neighboring grid fields of a given grid cell. The orientation of a grid cell is the tilt of the grid relative to a reference axis, and the phase is the displacement in the x and y directions relative to an external reference point. In other words, grid cells that belong to the same module share a common period and orientation, but their phases differ \cite{Hafting:Microstructure05}.
+
+There are plenty of place cell models in the literature, such as \cite{Tsodyks:Population96}, \cite{Arleo:Spatial00}, \cite{Lengyel:Dynamically03}, \cite{Lever:Long02} and \cite{Bostock:Experience91}. There are also a lot of models on grid cell firing such as \cite{Burgess:oscillatory07}, \cite{Giocomo:Temporal07}, \cite{Zilli:Coupled10} \cite{Hasselmo:Grid07} and \cite{Hasselmo:Grid08}. However, there is only a few that discusses grid cells and place cells together. These include \cite{Lyttle:Spatial13}, \cite{Solstad:From06}, \cite{McNaughton:Path06}, \cite{Fuhs:spin06} and \cite{Savelli:Hebbian10}. \cite{Lyttle:Spatial13} includes a computational model to construct place fields using grid fields and nonspatial inputs, and it uses dorso-ventral gradient. On the other hand,\cite{Savelli:Hebbian10} addresses how an integrate-and-fire unit driven by grid-cell spike trains may transform the spatial firing pattern of grid cells into the single-peaked activity of hippocampal place cells. In their simulations the selection of grid cell inputs are accomplished by fast Hebbian plasticity alone. Similar to \cite{Lyttle:Spatial13} and \cite{Savelli:Hebbian10}, \cite{Solstad:From06} also constructs place fields out of appropriately weighted inputs from grid cells. The authors have found out that when the spatial phase variation in the grid cell input is high, multiple and irregularly spaced firing fields are formed. However, none of these aim to answer any questions related to development of grid cells. \cite{McNaughton:Path06}, on the other hand, discusses the continuous attractor network (CAN) and oscillatory interference (OI) models. It also includes a developmental model for an anatomically non-topographic MEC path integrator. In their model, Hebbian plasticity within a module generates a synaptic matrix in which neurons tuned to similar Turing layer grid phases will be strongly coupled, whereas cells with opposite phase tuning will be weakly coupled. However, there is no known anatomical difference between grid cells with different phases. Thus, coupling cells according to their phases may not have an physiological basis. Finally, \cite{Fuhs:spin06} describes a symmetric, locally connected neural network that spontaneously produces a hexagonal grid of activity bumps in 2D. Nevertheless, their model is too complex such that it includes animals normalized speed, membrane voltages, symmetric and non-symmetric weight matrices and other terms to eliminate the edge effect.
+
+Together, grid and place cells form a topographical map for navigational tasks \cite{Moser:Place08}. This map can be characterized by a weight matrix, where the entries correspond to synaptic connections between grid and place cells \cite{Burak:Accurate09}. In other words, if we have a network of $ M $ grid and $ N $ place cells, we can use a $ (M+N)\times(M+N) $ weight matrix to keep track of all possible synaptic connections. Using a Hebbian plasticity rule with decay, these connections can be strengthened or weakened in accordance with the fields visited during behavior. Thus, a rodent learning a path through specific locations will form a weight matrix that could act as a signature for the learned path.
+
+\section{Methods}
+
+\subsection{Neural Models}
+In our model, we consider 500 place cells with a continuously increasing field size across the ventral axis. Place fields are assumed to have Gaussian tuning curves suggested by \cite{OKeefe:Geometric96}, with the probability density function being
+\begin{equation}
+\label{eq:placeprob}
+f(x,y)=\frac{\exp \left\{ -\frac 1{2(1-\rho ^2)}\left[ \left( \frac{x-\mu _x%
+}{\sigma _x}\right) ^2-2\rho \left( \frac{x-\mu _x}{\sigma _x}\right) \left( 
+\frac{y-\mu _y}{\sigma _y}\right) +\left( \frac{y-\mu _y}{\sigma _y}\right)
+^2\right] \right\} }{2\pi \sigma _x\sigma _y\sqrt{1-\rho ^2}} 
+\end{equation}
+where $(\mu _x,\mu _y)$ is the mean vector and the covariance matrix is
+\begin{equation}
+\left( 
+\begin{array}{cc}
+Var(X) & Cov(X,Y) \\ 
+Cov(X,Y) & Var(Y)
+\end{array}
+\right) =\left( 
+\begin{array}{cc}
+\sigma _x^2 & \rho \sigma _x\sigma _y \\ 
+\rho \sigma _x\sigma _y & \sigma _y^2
+\end{array}
+\right) 
+\end{equation}
+In the model, $ \sigma _x^2 $ and $ \sigma _y^2 $ varies from 50 to 675. $ \sigma _x^2 $ and $ \sigma _y^2 $ defines the field scale and $ \rho \sigma _x\sigma _y $ defines the shape of the field. $ \rho $ is assumed to be 0, which results in circular place fields. Since the result of a Gaussian function never achieves 0, we have clipped the function and assigned the value 0 where the result of the function is less than $ 10^{-1} $. In addition, since larger variance would result in smaller peak firing rates, to eliminate that effect, we normalize each cell with its peak firing value. The resulting place fields are shown in Figures \ref{fig:p1}, \ref{fig:p2} and \ref{fig:p3}.
+
+\begin{figure}[ht]
+\centering
+\subfigure[$ \sigma _x^2=\sigma _y^2=50 cm^2 $]{
+   \includegraphics[scale =0.33] {figures/p1.eps}
+   \label{fig:p1}
+ }
+ \subfigure[$ \sigma _x^2=\sigma _y^2=250 cm^2 $]{
+   \includegraphics[scale =0.33] {figures/p2.eps}
+   \label{fig:p2}
+ }
+  \subfigure[$ \sigma _x^2=\sigma _y^2=450 cm^2 $]{
+   \includegraphics[scale =0.33] {figures/p3.eps}
+   \label{fig:p3}
+ }
+ \subfigure[$ \lambda = 20 $cm]{
+   \includegraphics[scale =0.33] {figures/g1.eps}
+   \label{fig:g1}
+ }
+ \subfigure[$ \lambda = 60 $cm]{
+   \includegraphics[scale =0.33] {figures/g2.eps}
+   \label{fig:g2}
+ }
+  \subfigure[$ \lambda = 100 $cm]{
+   \includegraphics[scale =0.33] {figures/g3.eps}
+   \label{fig:g3}
+ }
+\caption{Place Fields with Various $ \sigma^{2} $ Values and Grid Fields with Various $ \lambda $ values}
+\label{fig:places}
+\end{figure}
+
+Grid cells, on the other hand, are assumed to consist of three 2-D cosine functions as suggested by \cite{Solstad:From06}, with their gratings oriented at different angles, $ \pi/3 $ apart. There are also 500 grid cells with field sizes increasing continuously across the ventral axis. The gaps between grid fields increase as the grid field sizes increase, in  accordance with \cite{Brun:Progressive08} and \cite{Hafting:Microstructure05}. Using \cite{Lyttle:Spatial13}, we have derived the grid cell model as follows:
+\begin{equation}
+\label{eq:gridprob}
+G(\sv, \lambda, \theta, \cv) = g\left(\sum_{k=1}^{3} \cos\left(\frac{4\pi}{\sqrt{3\lambda}}\uv(\theta_{k}-\theta)\cdot(\sv-\cv)\right)\right),
+\end{equation}
+where $ \sv=(x,y)$ is the location vector ($1\times 2$ vector in 2D space), $ k $ is the inter-vertex spacing between grid points (in cm), $ \cv = (x_{0},y_{0}) $ is the spatial phase (in cm relative to the origin), $ \uv(\theta_{k})=(\cos(\theta_{k}), \sin(\theta_{k}))$ is a unit vector denoting grid orientation in the direction $ \theta_{k} $. ($\cdot$ denotes the inner product). In the grid cell models, we use $ \theta_{1} = 0 $, $ \theta_{2} = \pi/3 $ and $ \theta_{3} = 2\pi/3 $, and the sum of 3 cosine functions are applied to $ g(x) $, where $ g(x) = \exp(a(x-b))-1 $, and $ a=0.3 $ and $ b=-1.5 $, in accordance with \cite{Almeida:input09}. We normalize each grid cell with its peak value so that the peak firing rate in each grid cell is 1. The values of $ \lambda $ are varied between 20 cm and 1.2 m, similar to the ones used in \cite{Moser:Grid14}. The resulting grid fields are shown in Figures \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3}.
+
+\subsection{Path Models}
+Regarding the path that the rat follows, we consider both experimental data and data obtained by simulations. The maze used for collecting experimental data is circular shaped with a radius of 1 m. Within the maze, there are several reward locations that the rat is fed when it visits those locations. Hence, once the rat learns the experiment, it does not explore the whole simulation area and tends to traverse the shortest path between reward locations.
+
+For the simulations, we have defined a circular simulation area with radius being 1 m, and moved our virtual rat within that, in order to be consistent in term of size. Path algorithm explaining the movement of a foraging rat is derived from \cite{Hasselmo:Grid07} and can be summarized by the following equations:
+\begin{equation}
+\begin{array}{cc}
+\Delta x(t) = S(1-m)p_{x} + m\Delta x(t-1)\\
+\Delta y(t) = S(1-m)p_{y} + m\Delta y(t-1)
+\end{array}
+\end{equation}
+where $ S = 5 $, $ m = 0.9 $, and $ p_{x}, p_{y} \sim \Nc(0,1) $. This  way, rat's motion heavily depends on its momentum, i.e., it cannot change its direction drastically. To ensure that rat stays within  the boundaries of the simulation area, we use the following formulas
+\begin{equation}
+\begin{array}{cc}
+\Delta x_{r}(t) = - \Delta x(t)\\
+\Delta y_{r}(t) = - \Delta y(t)
+\end{array}
+\end{equation}
+whenever rat initiates a motion towards out of the boundaries, and we basically reflect that motion. In Figure \ref{fig:gexp} the locations at which the grid cell spikes are superimposed on the experimental trajectory are shown in red. Each red dot corresponds to one spike. Figure \ref{fig:gsim} and \ref{fig:pexp} shows the grid cell spikes on the simulated trajectory and place cell spikes on experimental trajectory, respectively.
+
+\begin{figure}[H]
+\centering
+ \subfigure[Grids on Experimental Learned]{
+   \includegraphics[scale =0.33] {figures/gridexp2.eps}
+   \label{fig:gexp}
+ }
+  \subfigure[Grids on Experimental Random]{
+   \includegraphics[scale =0.33] {figures/gridexprnd.eps}
+   \label{fig:gsim}
+ }
+\subfigure[Grids on Simulated]{
+   \includegraphics[scale =0.33] {figures/grid200probfiring.eps}
+   \label{fig:gsim2}
+ }
+  \subfigure[Place on Experimental]{
+   \includegraphics[scale =0.33] {figures/placeexp2.eps}
+   \label{fig:pexp}
+ }
+   \subfigure[Place on Experimental Random]{
+   \includegraphics[scale =0.33] {figures/placeexprnd.eps}
+   \label{fig:psim}
+ }
+   \subfigure[Place on Simulated]{
+   \includegraphics[scale =0.33] {figures/place200probfiring.eps}
+   \label{fig:pexp2}
+ }
+\caption{Grid and Place Cell Spikes Superimposed on Experimental and Simulated Trajectories}
+\label{fig:proj}
+\end{figure}
+
+In order to retrieve the active cells at a given time, we first initialize a $ t \times n $ RetrieveActive matrix with $ 0 $s, where $ t $ is the total simulation time and $ n $ is the number of grid/place cells. Then, the location of the rat is acquired at a given time, and if that location is within a place/grid field, the corresponding entry in the RetrieveActive matrix is changed into 1. Using this matrix, average firing rate for grid and place cells have been plotted for simulated path, and the results are shown in Figure \ref{fig:avggrid} and \ref{fig:avgplace}, respectively. In addition, the average firing rate for grid and place cells for experimental path are shown in Figure \ref{fig:avggrid2} and \ref{fig:avgplace2}, respectively.
+ 
+\begin{figure}[H]
+\centering
+\subfigure[Grid cells on simulated path]{
+   \includegraphics[scale =0.5] {figures/avgfiringgrid.eps}
+   \label{fig:avggrid}
+ }
+ \subfigure[Place cells on simulated path]{
+   \includegraphics[scale =0.5] {figures/avgfiringplace.eps}
+   \label{fig:avgplace}
+   }
+ \subfigure[Grid cells on experimental path]{
+   \includegraphics[scale =0.5] {figures/avgfiringgridexp.eps}
+   \label{fig:avggrid2}
+ }
+ \subfigure[Place cells on experimental path]{
+   \includegraphics[scale =0.5] {figures/avgfireplaceexp.eps}
+   \label{fig:avgplace2}
+ }
+\label{fig:avgfiring}
+\caption{Average Firing Probability versus Field Radius for Simulated and Experimental Paths}
+\end{figure}
+
+Here, we assume that the rat is considerably slow. Thus, when we sample from two points consecutively, $ (x(t),y(t)) $ and $ (x(t+\delta),y(t+\delta)) $ are almost equal to each other, i.e, $ \delta \approx 0 $.
+
+\subsection{Learning Neural Connectivity Over Navigational Path}
+
+To acquire some knowledge about the synaptic connectivity of the neurons, we try to obtain the weight matrix between grid and place cells. For that purpose, we started with unsupervised Hebbian rule where the matrix entries $ w_{ij} $s are updated as follows
+\begin{equation}
+\label{eq:weight}
+w_{ij}(t) = w_{ij}(t-1) + \alpha x_{i}(s(t)) x_{j}(s(t))
+\end{equation}
+Here, $ s(t) $ is the stimuli at time $ t $, $ \alpha $ is the learning rate, $ x_{i} $ is the pre-synaptic neuron and $ x_{j} $ is the post-synaptic neuron. $ w_{ij} $s corresponds to synapses, and as a result, when two cells 'fire together they wire together'. As expressed in the Equation \ref{eq:weight}, when both neurons fire with stimuli $ s(t) $, we update both $ w_{ij} $ and $ w_{ji} $, regardless of which neuron fires first. Thus, the resulting weight matrices are symmetric. We start with initializing the matrix with zeros and update the entries at each location on the path. We use the firing probabilities of place and grid cells as described in Equations \ref{eq:placeprob} and \ref{eq:gridprob}, for $ x_{i} $ and $ x_{j} $.
+
+However, one problem with unsupervised Hebbian rule is that the entries can grow without bounds. To overcome this, we decided to switch to the Hebbian rule with decay and modified our update equation by adding a decay element as follows
+\begin{equation}
+\label{eq:parcali}
+w_{ij}(t) = \begin{cases} 
+     		 w_{ij}(t-1) + \alpha_{ij} x_{i}(s(t)) x_{j}(s(t)) & \mbox{if  } x_{i}(s(t)) \cdot x_{j}(s(t))>0 \\
+     		 w_{ij}(t-1) - \gamma_{ij} x_{i}(s(t)) & \mbox{if  } x_{j}(s(t))=0, x_{i}(s(t)) \geq 0
+  		 	\end{cases}
+\end{equation}
+where $ \gamma_{ij} = \gamma $ is the decay rate. Here, $ \alpha_{ij} $ depends on $ i $ and $ j $ in order to ensure modularity. Because, we found out that when $ \alpha $ is homogeneous across all $ i,j $ pairs, we cannot achieve modularity. For that purpose, we have defined $ \alpha_{ij} = 0.3 $ when $ i,j \in [1,100] or [101,200] or [201,300] or [301,400]or [401,500] $ and $ \alpha_{ij} = 0.05 $ otherwise. In Equation \ref{eq:parcali}, we should not decrease $ w_{ij} $s if neither $ x_{i}(s(t)) $ nor $ x_{j}(s(t)) $ is nonzero; otherwise, associations will be lost if stimuli is not occasionally present. When using this equation, we should take the negative entries to zero, since $ w_{ij} $s cannot be negative by definition.
+
+\section{Results}
+
+\subsection{1D Analysis}
+Here, we are trying to find out the relationship between the periods of two grid cells in order to maximize the cross-correlation between their firing fields. We assume the cells span 1D space.
+
+In 1D, the cross-correlation formula of two cells can be represented as
+\begin{equation}
+\int_{0}^{R} (1 + \cos(\frac{2 \pi}{\lambda_1} x + \phi_1)) (1 + \cos(\frac{2 \pi}{\lambda_2} x + \phi_2)) dx
+\end{equation}
+where R is the length of the simulation area, $ \lambda_1 $ and $ \lambda_2 $ are the periods, $ \phi_1 $ and $ \phi_2 $ are the phases of the first and the second cell, respectively. If we assume the phases are equal to 0 and analytically solve the equation, we get
+
+\begin{equation}
+\int_{0}^{R} (1 + \cos(\frac{2 \pi}{\lambda_1} x + \phi_1)) (1 + \cos(\frac{2 \pi}{\lambda_2} x + \phi_2)) dx = \int_{0}^{R} (1 + \cos(\frac{2 \pi x}{\lambda_1}) + \cos(\frac{2 \pi x}{\lambda_2}) + \cos(\frac{2 \pi x}{\lambda_1}) \cos(\frac{2 \pi x}{\lambda_1} )) dx \notag
+\end{equation}
+
+\begin{equation}
+= R + \frac{\lambda_1}{2 \pi} \sin \frac{2 \pi R}{\lambda_1} + \frac{\lambda_2}{2 \pi} \sin \frac{2 \pi R}{\lambda_2} + \frac{\lambda_1 \lambda_2}{4 \pi (\lambda_1 - \lambda_2)} \sin \frac{2 \pi R (\lambda_1 - \lambda_2)}{\lambda_1 \lambda_2} + \frac{\lambda_1 \lambda_2}{4 \pi (\lambda_1 + \lambda_2)} \sin \frac{2 \pi R (\lambda_1 + \lambda_2)}{\lambda_1 \lambda_2}
+\label{eq:intresult}
+\end{equation}
+The fourth term in \eqref{eq:intresult} is equal to $$ \frac{R}{2} sinc(\frac{2 \pi R (\lambda_1 - \lambda_2)}{\lambda_1 \lambda_2}) $$ which is maximized as $ (\lambda_1 - \lambda_2)\rightarrow 0 $. The fifth term, on the other hand, is equal to $$ \frac{R}{2} sinc(\frac{2 \pi R (\lambda_1 + \lambda_2)}{\lambda_1 \lambda_2}) $$ which is maximized as $ \lambda_1 $ and $ \lambda_2 $ gets larger. Accordingly, second and third terms can also be rewritten as $$ R sinc(\frac{2 \pi x }{\lambda_1}) $$ and $$ R sinc(\frac{2 \pi x }{\lambda_2}), $$ which are also maximized as $ \lambda_1 $ and $ \lambda_2 $ gets larger. In short, we can say that the integral is maximized when $ \lambda_1 = \lambda_2 $ and they are both large.
+
+If we rewrite \eqref{eq:intresult} with $ sinc $ terms, we get
+\begin{equation}
+= R( 1 + sinc(\frac{2 \pi x }{\lambda_1}) + sinc(\frac{2 \pi x }{\lambda_2}) + \frac{1}{2} sinc(\frac{2 \pi R (\lambda_1 - \lambda_2)}{\lambda_1 \lambda_2}) + \frac{1}{2} sinc(\frac{2 \pi R (\lambda_1 + \lambda_2)}{\lambda_1 \lambda_2}))
+\label{eq:intresult2}
+\end{equation}
+
+In order to compute the integral, we assumed that $ R = 200 cm $ and we have used 3 reference periods which are 40 cm, 60 cm and 80 cm. The resulting value of the normalized integral versus the second $ \lambda $ value is shown in Figures \ref{fig:cross1d40}, \ref{fig:cross1d60} and \ref{fig:cross1d80} for all 3 reference $ \lambda $ values.
+
+\begin{figure}[H]
+\centering
+\subfigure[Reference $ \lambda = 40 $ cm]{
+   \includegraphics[scale =0.33] {figures/cross1d40.eps}
+   \label{fig:cross1d40}
+ }
+ \subfigure[Reference $ \lambda = 60 $ cm]{
+   \includegraphics[scale =0.33] {figures/cross1d60.eps}
+   \label{fig:cross1d60}
+   }
+ \subfigure[Reference $ \lambda = 80 $ cm]{
+   \includegraphics[scale =0.33] {figures/cross1d80.eps}
+   \label{fig:cross1d80}
+ }
+ \subfigure[Reference $ \lambda = 40 $ cm]{
+   \includegraphics[scale =0.33] {figures/peak40.eps}
+   \label{fig:peak40}
+ }
+ \subfigure[Reference $ \lambda = 60 $ cm]{
+   \includegraphics[scale =0.33] {figures/peak60.eps}
+   \label{fig:peak60}
+   }
+ \subfigure[Reference $ \lambda = 80 $ cm]{
+   \includegraphics[scale =0.33] {figures/peak80.eps}
+   \label{fig:peak80}
+ }
+\caption{Top row: Normalized Cross-correlation in 1D versus $ \lambda $ for 3 Reference Periods. Bottom row: Ratio of the two consecutive peaks versus peak locations. }
+\label{fig:1d}
+\end{figure}
+
+We also investigate the ratio of the two consecutive peaks in Figures \ref{fig:peak40}, \ref{fig:peak60} and \ref{fig:peak80}. The average peak ratio is 1.2128 in Figure \ref{fig:peak40}, 1.2249 in Figure \ref{fig:peak60} and 1.2192 in Figure \ref{fig:peak80}. The findings are compatible with Moser's paper. (ref)
+
+\subsection{2D Analysis}
+
+Here we did the same analysis we did 1D.
+
+\begin{figure}[H]
+\centering
+\subfigure[Reference $ \lambda = 40 $ cm]{
+   \includegraphics[scale =0.33] {figures/nophase40.eps}
+ }
+ \subfigure[Reference $ \lambda = 60 $ cm]{
+   \includegraphics[scale =0.33] {figures/nophase60.eps}
+   }
+ \subfigure[Reference $ \lambda = 80 $ cm]{
+   \includegraphics[scale =0.33] {figures/nophase80.eps}
+ }
+ \subfigure[Reference $ \lambda = 40 $ cm]{
+   \includegraphics[scale =0.33] {figures/40averagedsmoothed.eps}
+   \label{fig:2dpeak40}
+ }
+ \subfigure[Reference $ \lambda = 60 $ cm]{
+   \includegraphics[scale =0.33] {figures/60averagedsmoothed.eps}
+   \label{fig:2dpeak60}
+   }
+ \subfigure[Reference $ \lambda = 80 $ cm]{
+   \includegraphics[scale =0.33] {figures/80averagedsmoothed.eps}
+   \label{fig:2dpeak80}
+ }
+\caption{Normalized Cross-correlation in 2D versus $ \lambda $ for 3 reference periods. Top row: Phases are assumed to be equal. Bottom row: Results averaged over random phase}
+\label{fig:2d}
+\end{figure}
+
+The average peak ratio is 2.0189 in Figure \ref{fig:2dpeak40}, 1.6965 in Figure \ref{fig:2dpeak60} and 1.7895 in Figure \ref{fig:2dpeak80}. 
+
+In addition, we wanted to see the effect of the period and orientation together. For that purpose, we plotted a 3D graph that shows period, orientation and cross-correlation altogether, and that graph is shown in Figure \ref{fig:3dcross}.
+
+\begin{figure}[H]
+\centering
+   \includegraphics[scale =0.8] {figures/surfplot.eps}
+\caption{Central value of the cross-correlation versus $ \lambda $ and orientation for an $ 4m \times 4m $ simulation area}
+\label{fig:3dcross}
+\end{figure}
+
+The new 3D figure is shown in Figure
+
+\begin{figure}[H]
+\centering
+\subfigure[Surface Plot]{
+   \includegraphics[scale =0.33] {figures/new3d.eps}
+ }
+ \subfigure[Correlation vs. Orientation]{
+   \includegraphics[scale =0.33] {figures/new3dv2.eps}
+   }
+ \subfigure[Correlation vs. $ \lambda $]{
+   \includegraphics[scale =0.33] {figures/new3dv3.eps}
+ }
+\caption{Normalized Cross-correlation in 2D versus $ \lambda $ and orientation for an $ 2m \times 2m $ simulation area. Reference $ \lambda = 60 $ cm and the reference orientation = 0 degrees.}
+\label{fig:3dnew}
+\end{figure}
+
+
+\subsection{Main Part}
+Starting with a homogeneous, smooth distribution of firing field gradients of place and grid cells, we study the structure of the weight matrix when actual paths recorded from rodents are followed. Two conditions were considered: random foraging and learning of paths between specific rewarded locations. We observed significant differences in the resulting weight matrices. The weight matrix corresponding to foraging shows a smooth connectivity pattern throughout the synaptic population. On the other hand, the weight matrix of the path with reward locations shows a clear pattern consisting of sub-modules organized along the dorso-ventral axis in the grid-grid connectivity region. This result suggests that grid cells synaptically group themselves in modules on a learned path. However, this modularity does not appear in place-place or grid-place connections. These results are compatible with, and may partially explain, the electrophysiological results obtained experimentally.
+
+Using the resulting weight matrices as a feedback, we then update the periods of the grid cells in both scenarios. We hope to see a modular formation in the periods of the cells when the rat follows a learned path. Overall, our plasticity-based framework is a novel computational model that suggests a mechanism for the formation of dorso-ventral modules in grid cells.
+
+We have applied Equation \ref{eq:parcali} with $ \alpha = 0.3 $ and $ \gamma = 0.6 $ on the simulated path of a foraging rat and experimental path with reward locations. The resulting weight matrices are shown on Figure \ref{fig:wjean} with the corresponding paths.
+
+\begin{figure}[H]
+\centering
+ \subfigure[Weight matrix of foraging rat]{
+   \includegraphics[scale =0.5] {figures/simwm.png}
+ }
+ \subfigure[Weight matrix of a path with reward locations]{
+   \includegraphics[scale =0.5] {figures/expwm.png}
+ }
+\caption{Weight matrices based on experimental data, showing grid-grid, grid-place, place-grid and place-place connectivities in the upper left, upper right, lower left and lower right regions, respectively.}
+   \label{fig:wjean}
+\end{figure}
+
+In the next step, we have used the weight matrix as a feedback, in order to update the firing probabilities of the cells. In other words, for a given cell $ i $, we can find a cell $ j $ such that $ w_{ij} $ is the highest in row $ i $. Then, we can increase the conditional firing probability of cell j, $ P(j \mid i) $, given that cell $ i $ fires. This may correspond to increasing the radius of cell $ j $'s tuning curve when cell $ i $ fires, or even merging their tuning curves. After that, we can recompute the weight matrix and continue this process until the system converges to steady state. The flowchart of the proposed algorithm is shown in Figure \ref{fig:flow}.
+
+\begin{figure}[H]
+\centering
+   \includegraphics[scale =0.7] {figures/flowchart.pdf}
+\caption{Proposed algorithm that updates the firing rate according to weight matrix entries}
+   \label{fig:flow}
+\end{figure}
+
+We have implemented this algorithm as follows: First, we have started with the original values of $ \lambda $s that are continuously increasing and computed our first weight matrix. Then, we have updated our $ \lambda $ values such that
+\begin{equation}
+\lambda_{j}(t) = \alpha \lambda_{j}(t-1) + (1-\alpha)\dfrac{\sum_{i \in N_{j}} W_{ij} \lambda_{i}}{\sum_{i \in N_{j}} W_{ij}}
+\end{equation}
+where $ \alpha $ is a constant that determines how much the updated value will depend on the previous value, $ W_{ij} $ is the weight matrix entry between cell $ i $ and cell $ j $, and $ N_{j} $ is the neighborhood of cell $ j $ that consists of the cells that are strongly connected to that cell. We have continued to calculate the weight matrices and updating $ \lambda $ values until the steady state has been reached, according to
+\begin{equation}
+\lambda(t) - \lambda(t-1) \stackrel{?}{<} \epsilon
+\end{equation}
+
+One can think of this formula as a basic update rule to change the tuning curves. However, later, we might consider moving on with a more detailed model that also considers the locations of the centers of grid fields and updates the tuning curve accordingly.
+
+In addition, we wanted to see the effects of the initial conditions of $ \lambda $. For that purpose, we considered three conditions: continuously increasing $ \lambda $s, modular $ \lambda $s and random $ \lambda $s. The results of the continuously increasing and random $ \lambda $s were similar, so we included the resulting weight matrices of continuously increasing $ \lambda $s and modular $ \lambda $s in Figure \ref{fig:multi}. The resulting $ \lambda $ values of the corresponding cases are also shown in Figure \ref{fig:onlearn}.
+
+\begin{figure}[H]
+\centering
+  \subfigure[Homogeneous Grids on Learned Path]{
+   \includegraphics[scale =0.5] {figures/gridsonlearned.png}
+   \label{fig:glearn}
+ }
+\subfigure[Modular Grids on Learned Path]{
+   \includegraphics[scale =0.5] {figures/modularonlearned.png}
+   \label{fig:mlearn}
+ }
+\subfigure[Homogeneous Grids on Random Path]{
+   \includegraphics[scale =0.5] {figures/gridsonrandom.png}
+   \label{fig:grand}
+ }
+\subfigure[Modular Grids on Random Path]{
+   \includegraphics[scale =0.5] {figures/modularonrandom.png}
+   \label{fig:mrand}
+ }
+\caption{Formation of Weight Matrix with Different Initial Conditions and Paths}
+\label{fig:multi}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+  \subfigure[Inter-Modular Weights = 0]{
+   \includegraphics[scale =0.4] {figures/weighted.eps}
+ }
+\subfigure[Inter-Modular Weights = 0, $ \lambda $s sorted]{
+   \includegraphics[scale =0.4] {figures/weightedsorted.eps}
+ }
+\subfigure[Inter-Modular Weights = 0.03]{
+   \includegraphics[scale =0.4] {figures/newweighted003.eps}
+ }
+\subfigure[Inter-Modular Weights = 0.03, $ \lambda $s sorted]{
+   \includegraphics[scale =0.4] {figures/newweightedsorted003.eps}
+ }
+ \subfigure[Inter-Modular Weights = 0.1]{
+   \includegraphics[scale =0.4] {figures/newweighted01.eps}
+ }
+\subfigure[Inter-Modular Weights = 0.1, $ \lambda $s sorted]{
+   \includegraphics[scale =0.4] {figures/newweightedsorted01.eps}
+ }
+\caption{Disappearance of the modular structure as the inter-modular weights increase from 0 to  0.1, when intra-modular weights are 0.3 }
+\label{fig:disapmodules}
+\end{figure}
+
+Here, we see that the modules form when the contribution of the $ \lambda $s of the cells outside a region of a specific cell is 0. This modular structure disappears as we increase the inter-modular contribution up to 0.1. Here we start with homogeneous $ \lambda $s initially.
+
+\section{Appendix}
+\subsection{Effect of Velocity}
+We also wanted to observe the effect of change in the velocity of the animal on the formation of the weight matrix. For that purpose, we sampled the path less frequently to increase the speed and more frequently to decrease it. The resulting weight matrices are shown in Figure \ref{fig:velocityef}.
+
+\begin{figure}[H]
+\centering
+ \subfigure[]{
+   \includegraphics[scale =0.33] {figures/wmthres500halfpart1.eps}
+   \label{fig:halfpart1}
+ }
+\subfigure[Half Speed]{
+   \includegraphics[scale =0.33] {figures/wmthres500halfpart2.eps}
+   \label{fig:halfpart2}
+ }
+  \subfigure[]{
+   \includegraphics[scale =0.33] {figures/wmthres500halfpart4.eps}
+   \label{fig:halfpart3}
+ }
+\subfigure[]{
+   \includegraphics[scale =0.33] {figures/wmthres500part1.eps}
+   \label{fig:part1}
+ }
+\subfigure[Original Speed]{
+   \includegraphics[scale =0.33] {figures/wmthres500part2.eps}
+   \label{fig:part2}
+ }
+  \subfigure[]{
+   \includegraphics[scale =0.33] {figures/wmthres500part4.eps}
+   \label{fig:part3}
+ }
+\subfigure[]{
+   \includegraphics[scale =0.33] {figures/wmthresh500x2part1.eps}
+   \label{fig:x2part1}
+ }
+\subfigure[Double Speed]{
+   \includegraphics[scale =0.33] {figures/wmthresh500x2part2.eps}
+   \label{fig:x2part2}
+ }
+\subfigure[]{
+   \includegraphics[scale =0.33] {figures/wmthresh500x2part4.eps}
+   \label{fig:x2part3}
+ }
+\caption{Effect of velocity on the formation of the weight matrix}
+\label{fig:velocityef}
+\end{figure}
+
+\subsection{Sparseness and Average Weight}
+Sparseness and average weight graphs are shown in Figure \ref{fig:spa} and \ref{fig:avgg}, respectively. Colors of the bars are in accordance to the regions in the color map (dorsal-dorsal, dorsal-ventral, ventral-ventral) in Figure \ref{fig:color}. Transparent colored bars belong to the data of learned path and the opaque bars belong to the random path.
+
+\begin{figure}[H]
+\centering
+ \subfigure[Sparseness]{
+   \includegraphics[scale =0.35] {figures/sparseness.png}
+      \label{fig:spa}
+ }
+\subfigure[Average Weight]{
+   \includegraphics[scale =0.35] {figures/avgweight.png}
+      \label{fig:avgg}
+ }
+ \subfigure[Color Map]{
+   \includegraphics[scale =0.32] {figures/colormap.png}
+      \label{fig:color}
+ }
+\caption{Sparseness and Average Weight Bar Charts with the Corresponding Color Map}
+\label{fig:sparseavg}
+\end{figure}
+
+\subsection{June 22 Omitted}
+
+The weight matrices obtained by using Equations \ref{eq:weight} and \ref{eq:parcali} are shown in Figures \ref{fig:weight} and \ref{fig:parcali}, respectively. 
+
+\begin{figure}[H]
+\centering
+ \subfigure[W from Equation \ref{eq:weight}]{
+   \includegraphics[scale =0.5] {figures/wmsimul.eps}
+   \label{fig:weight}
+ }
+\subfigure[W from Equation \ref{eq:parcali}]{
+   \includegraphics[scale =0.5] {figures/wm_v2.eps}
+   \label{fig:parcali}
+ }
+\caption{Weight matrices showing grid-grid, grid-place, place-grid and place-place connectivities in the upper left, upper right, lower left and lower right regions, respectively. In each region, left to right and upper to lower transitions correspond to dorsal to ventral transitions.}
+\label{fig:wm}
+\end{figure}
+
+
+We have plotted Figure \ref{fig:crvslm} again with more $ \lambda $ values, and in return better resolution. In addition to the previous figure, here we take the average of 9 central values in the graph instead of taking only the center point. The resulting graph is shown in Figure \ref{fig:crvslm2}.
+
+\begin{figure}[H]
+\centering
+   \includegraphics[scale =0.7] {figures/centervslambdasnew.eps}
+   \label{fig:crvslm2}
+
+\caption{Average of central values vs. $ \lambda $}
+\end{figure}
+
+
+Finally, we wanted to see the effect of the path on the cross-correlation. For that purpose, we multiplied the two rate maps of two different cells generated by \eqref{eq:gridprob} and superimposed the product on the learned path and on the random path. We choose the index of the reference cell as 250, which corresponds to a period of 0.6 meters, and the period of the second cell varies between 0.2 meters to 1.2 meters in accordance with the cell index. The resulting graph is shown in Figure \ref{fig:sumoverpath}, but it needs to be averaged over random phase and orientation.
+
+\begin{figure}[H]
+\centering
+   \includegraphics[scale =0.7] {figures/sumoverpath.eps}
+   \label{fig:sumoverpath}
+
+\caption{Product of two rate maps superimposed on the learned and the random path vs. cell index}
+\end{figure}
+
+After the final $ \lambda $ values are calculated, we have clustered them into several modules. The resulting graphs for the learned path and the random path are shown in Figure \ref{fig:clust}.
+
+\begin{figure}[H]
+\centering
+ \subfigure[$ \lambda $ values over the learned path]{
+   \includegraphics[scale =0.5] {figures/learnedcluster10.eps}
+   \label{fig:clulearn}
+ }
+\subfigure[$ \lambda $ values over the random path]{
+   \includegraphics[scale =0.5] {figures/randcluster10.eps}
+   \label{fig:clurand}
+ }
+\caption{Updated and clustered $ \lambda $ values over learned and random paths}
+\label{fig:clust}
+\end{figure}
+
+If we calculate the mean values of the clusters in both paths, we see that $ \lambda_{mean}=[0.5431, 0.7818, 0.9304] $ for the random path and $ \lambda_{mean}=[0.5612, 0.7242, 0.8595] $ for the learned path.
+
+The sorted $ \lambda $ values of the same scenarios are also shown in Figure \ref{fig:sorted}.
+
+\begin{figure}[H]
+\centering
+ \subfigure[Sorted $ \lambda $ values over the learned path]{
+   \includegraphics[scale =0.5] {figures/lambdas10s.eps}
+   \label{fig:sortlamb}
+ }
+\subfigure[Sorted $ \lambda $ values over the random path]{
+   \includegraphics[scale =0.5] {figures/randlambdas10s.eps}
+   \label{fig:sortrandlamb}
+ }
+\caption{Updated, clustered and sorted $ \lambda $ values over learned and random paths}
+\label{fig:sorted}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfigure[Homogeneous $ \lambda $ values over the random path]{
+   \includegraphics[scale =0.5] {figures/random.eps}
+ }
+ \subfigure[Modular $ \lambda $ values over the learned path]{
+   \includegraphics[scale =0.5] {figures/modular.eps}
+ }
+\caption{Updated $ \lambda $ values over learned path when started with homogeneous and modular $ \lambda $}
+\label{fig:onlearn}
+\end{figure}
+
+Here, we vary the simulation area and use normalized 2D cross-correlation function for our analysis. Our first simulation area is $ 3m \times 3m $ and we use three reference $ \lambda $ values for our analysis: 0.3m, 0.6m and 0.9m. We vary the second cell's period from 0.2m to 1.5m. Normalized cross-correlation graphs are shown in Figure \ref{fig:normcross}, and the change of the central value of the cross-correlation w.r.t period, for different reference periods are shown in Figure \ref{fig:normcross2}.
+
+\begin{figure}[H]
+\centering
+\subfigure[$ \lambda = 0.2 $]{
+   \includegraphics[scale =0.25] {figures/norm06_1.eps}
+ }
+\subfigure[$ \lambda = 0.4 $]{
+   \includegraphics[scale =0.25] {figures/norm06_3.eps}
+ }
+  \subfigure[$ \lambda = 0.6 $]{
+   \includegraphics[scale =0.25] {figures/norm06_5.eps}
+ }
+\subfigure[$ \lambda = 0.8 $]{
+   \includegraphics[scale =0.25] {figures/norm06_7.eps}
+ }
+\subfigure[$ \lambda = 1 $]{
+   \includegraphics[scale =0.25] {figures/norm06_9.eps}
+ }
+\subfigure[$ \lambda = 1.2 $]{
+   \includegraphics[scale =0.25] {figures/norm06_11.eps}
+ }
+ \subfigure[$ \lambda = 1.4 $]{
+	
+   \includegraphics[scale =0.25] {figures/norm06_13.eps}
+ }
+\caption{Normalized dross-correlation of grid cell firings with different periods averaged over 500 trials ($ \lambda = 0.6 $ for the reference cell and the simulation area is $ 3m \times 3m $)}
+ \label{fig:normcross}
+\end{figure}
+
+Here, we have investigated the effect of the periods of two cells on the cross-correlation of their firing fields. For that purpose, we have set the period of the reference cell as 0.6 meters and varied the period of the second cell from 0.2 meters to 1 meter. We have averaged the results over random phase and orientation. Figure \ref{fig:crossmaps} shows the resulting cross-correlation maps for different periods.
+
+\begin{figure}[H]
+\centering
+\subfigure[$ \lambda = 0.2 $]{
+   \includegraphics[scale =0.33] {figures/avgcorr0602.eps}
+ }
+\subfigure[$ \lambda = 0.4 $]{
+   \includegraphics[scale =0.33] {figures/avgcorr0604.eps}
+ }
+  \subfigure[$ \lambda = 0.6 $]{
+   \includegraphics[scale =0.33] {figures/avgcorr0606.eps}
+ }
+\subfigure[$ \lambda = 0.8 $]{
+   \includegraphics[scale =0.33] {figures/avgcorr0608.eps}
+ }
+\subfigure[$ \lambda = 1 $]{
+   \includegraphics[scale =0.33] {figures/avgcorr061.eps}
+ }
+\caption{Cross-correlation of grid cell firings with different periods averaged over 500 trials ($ \lambda = 0.6 $ for the reference cell)}
+\label{fig:crossmaps}
+\end{figure}
+
+We have also investigated the effect of the orientations of the two cells on cross-correlation. For that purpose, we have set the orientation of the reference cell to $ \pi/6 $ and varied the orientation of the second cell from $ \pi/18 $ to $ \pi/3 $. We have averaged the results over random phase and periods. Figure \ref{fig:centvslamb} shows the change in the center value of the cross-correlation map w.r.t $ \lambda $ and Figure \ref{fig:centvsort} shows the change in the center value of the cross-correlation map w.r.t orientation.
+
+\begin{figure}[H]
+\centering
+\subfigure[Reference $ \lambda  = 0.6 $ m]{
+   \includegraphics[scale =0.5] {figures/centralcorrelationvslambda.eps}
+   \label{fig:centvslamb}
+ }
+\subfigure[Reference orientation = $ \pi / 6 $]{
+   \includegraphics[scale =0.5] {figures/centervsort.eps}
+   \label{fig:centvsort}
+ }
+\caption{Cross-correlation versus $ \lambda $ and orientation for an $ 3m \times 3m $ simulation area}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\subfigure[Reference $ \lambda = 0.3 $]{
+   \includegraphics[scale =0.33] {figures/normcross03.eps}
+ }
+\subfigure[Reference $ \lambda = 0.6 $]{
+   \includegraphics[scale =0.33] {figures/normcross06.eps}
+ }
+ \subfigure[Reference $ \lambda = 0.9 $]{
+   \includegraphics[scale =0.33] {figures/normcross09.eps}
+ }
+\caption{Central value of the cross-correlation versus $ \lambda $ for different reference $ \lambda $ values for an $ 3m \times 3m $ simulation area}
+ \label{fig:normcross2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfigure[Reference $ \lambda = 0.3 $]{
+   \includegraphics[scale =0.33] {figures/normcross03_4m.eps}
+ }
+\subfigure[Reference $ \lambda = 0.6 $]{
+   \includegraphics[scale =0.33] {figures/normcross06_4m.eps}
+ }
+ \subfigure[Reference $ \lambda = 0.9 $]{
+   \includegraphics[scale =0.33] {figures/normcross09_4m.eps}
+ }
+\caption{Central value of the cross-correlation versus $ \lambda $ for different reference $ \lambda $ values for an $ 4m \times 4m $ simulation area}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfigure[Reference $ \lambda = 0.3 $]{
+   \includegraphics[scale =0.33] {figures/normcross03_5m.eps}
+ }
+\subfigure[Reference $ \lambda = 0.6 $]{
+   \includegraphics[scale =0.33] {figures/normcross06_5m.eps}
+ }
+ \subfigure[Reference $ \lambda = 0.9 $]{
+   \includegraphics[scale =0.33] {figures/normcross09_5m.eps}
+ }
+\caption{Central value of the cross-correlation versus $ \lambda $ for different reference $ \lambda $ values for an $ 5m \times 5m $ simulation area}
+\end{figure}
+
+\subsection{Codebook Simulation}
+We have created a modular grid simulation such that the values of $ \lambda $ are taken from a normal distribution and the mean of the distribution increases by x times between modules (x=1:0.4:3), across the dorso-ventral axis. For the simulation, we have considered the following parameters: \\
+Simulation time = 1000 units \\
+Number of Modules = 5 \\
+Number of Cells per Module = 50 \\
+Number of Paths = 10 \\
+Number of Codes = 5 \\
+Number of Reward Locations = 3:10 \\
+
+At each $ \lambda $ value, we have run the simulation for several paths and obtained the resulting weight matrices. The i,j values that satisfies
+\begin{equation}
+\argmin_{i,j} \Vert W_{i} - W_{j} \Vert
+\end{equation}
+where $ \Vert x \Vert $ corresponds to l-2 norm of vector x, give us the minimum distance of the codebook corresponding to that $ \lambda $ value. We would like to find the optimum $ \lambda $ values to maximize the minimum distance, since larger minimum distance implies higher noise resilience and may biologically mean that it is easier to distinguish between different paths. However, the optimum $ \lambda $ values are different for different number of reward locations. Some cases are given below.
+
+\begin{figure}[H]
+\centering
+ \subfigure[Reward Locations = 3]{
+   \includegraphics[scale =0.5] {figures/10path3rew.eps}
+   \label{fig:rew3}
+ }
+\subfigure[Reward Locations = 4]{
+   \includegraphics[scale =0.5] {figures/10path4rew.eps}
+   \label{fig:rew4}
+ }
+  \subfigure[Reward Locations = 5]{
+   \includegraphics[scale =0.5] {figures/10path5rew.eps}
+   \label{fig:rew5}
+ }
+   \subfigure[Reward Locations = 6]{
+   \includegraphics[scale =0.5] {figures/10path6rew.eps}
+   \label{fig:rew6}
+ }
+\caption{Minimum distance versus $ \lambda $ for various number of reward locations}
+\label{fig:rewards}
+\end{figure}
+
+\newpage
+\section{References}
+\bibliography{irmakref}
+\bibliographystyle{jneurosci}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

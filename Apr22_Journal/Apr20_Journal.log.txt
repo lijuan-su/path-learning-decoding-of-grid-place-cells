@@ -1,0 +1,982 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.27)  22 APR 2016 16:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Apr20_Journal.tex
+(./Apr20_Journal.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count87
+\float@exts=\toks14
+\float@box=\box26
+\@float@everytoks=\toks15
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/05/13 v2.10 `tabularx' package (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks17
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+\TX@col@width=\dimen107
+\TX@old@table=\dimen108
+\TX@old@col=\dimen109
+\TX@target=\dimen110
+\TX@delta=\dimen111
+\TX@cols=\count89
+\TX@ftn=\toks18
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen112
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen113
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen114
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip11
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks20
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks21
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks22
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip48
+\subfigcapskip=\skip49
+\subfigcaptopadj=\dimen122
+\subfigbottomskip=\skip50
+\subfigcapmargin=\dimen123
+\subfiglabelskip=\skip51
+\c@subfigure=\count102
+\c@lofdepth=\count103
+\c@subtable=\count104
+\c@lotdepth=\count105
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip52
+\subfig@bottom=\skip53
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2014/05/13 v1.1q fixes to LaTeX
+LaTeX Info: Redefining \em on input line 429.
+LaTeX Info: The control sequence `\[' is already robust on input line 480.
+LaTeX Info: The control sequence `\]' is already robust on input line 481.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box30
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen124
+\ttl@minus=\dimen125
+\ttl@toksa=\toks24
+\titlewidth=\dimen126
+\titlewidthlast=\dimen127
+\titlewidthfirst=\dimen128
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/jneurosci/jneurosci.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen129
+\captionmargin@=\dimen130
+\captionwidth=\dimen131
+\caption@tempdima=\dimen132
+\caption@indent=\dimen133
+\caption@parindent=\dimen134
+\caption@hangindent=\dimen135
+)
+\c@ContinuedFloat=\count106
+Package caption Info: float package is loaded.
+Package caption Info: subfigure package is loaded.
+)
+(./Apr20_Journal.aux)
+\openout1 = `Apr20_Journal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen136
+\scratchbox=\box31
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen137
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks26
+)
+LaTeX Info: Redefining \celsius on input line 40.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 40.
+Package gensymb Info: Using \Omega for \ohm on input line 40.
+
+Package gensymb Warning: Not defining \micro.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\c@task=\count113
+LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1] [2]
+
+<figures/ExpRan5000_1.pdf, id=27, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_1.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_1.pdf>
+Package pdftex.def Info: figures/ExpRan5000_1.pdf used on input line 191.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+
+<figures/ExpRew5000_1.pdf, id=28, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_1.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_1.pdf>
+Package pdftex.def Info: figures/ExpRew5000_1.pdf used on input line 195.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+
+<figures/SimRan5000_1.pdf, id=29, 578.16pt x 433.62pt>
+File: figures/SimRan5000_1.pdf Graphic file (type pdf)
+
+<use figures/SimRan5000_1.pdf>
+Package pdftex.def Info: figures/SimRan5000_1.pdf used on input line 199.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+
+<figures/Sim3Rew1000_1.pdf, id=30, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_1.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_1.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_1.pdf used on input line 203.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+
+<figures/ExpRan5000_10.pdf, id=31, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_10.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_10.pdf>
+Package pdftex.def Info: figures/ExpRan5000_10.pdf used on input line 214.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+
+<figures/ExpRew5000_10.pdf, id=32, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_10.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_10.pdf>
+Package pdftex.def Info: figures/ExpRew5000_10.pdf used on input line 218.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+
+<figures/CellOnPath_1.pdf, id=33, 578.16pt x 433.62pt>
+File: figures/CellOnPath_1.pdf Graphic file (type pdf)
+
+<use figures/CellOnPath_1.pdf>
+Package pdftex.def Info: figures/CellOnPath_1.pdf used on input line 230.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+
+<figures/CellOnPath_3.pdf, id=34, 578.16pt x 433.62pt>
+File: figures/CellOnPath_3.pdf Graphic file (type pdf)
+
+<use figures/CellOnPath_3.pdf>
+Package pdftex.def Info: figures/CellOnPath_3.pdf used on input line 238.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+
+<figures/CellOnPath_4.pdf, id=35, 578.16pt x 433.62pt>
+File: figures/CellOnPath_4.pdf Graphic file (type pdf)
+
+<use figures/CellOnPath_4.pdf>
+Package pdftex.def Info: figures/CellOnPath_4.pdf used on input line 242.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ [3] [4 <./figures/ExpRan5000_1.pdf> <./figures/ExpRew5000_1.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_1.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/SimRan5000_1.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan5000_1.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_1.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_1.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/ExpRan5000_10.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_10.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/ExpRew5000_10.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_10.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/CellOnPath_1.pdf
+
+pdfTeX warning: pdflatex (file ./figures/CellOnPath_1.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/CellOnPath_3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/CellOnPath_3.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/CellOnPath_4.pdf
+
+pdfTeX warning: pdflatex (file ./figures/CellOnPath_4.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>] [5] <figures/Grid1D_1.pdf, id=244, 578.16pt x 433.62pt>
+File: figures/Grid1D_1.pdf Graphic file (type pdf)
+
+<use figures/Grid1D_1.pdf>
+Package pdftex.def Info: figures/Grid1D_1.pdf used on input line 311.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid1D_3.pdf, id=245, 578.16pt x 433.62pt>
+File: figures/Grid1D_3.pdf Graphic file (type pdf)
+
+<use figures/Grid1D_3.pdf>
+Package pdftex.def Info: figures/Grid1D_3.pdf used on input line 315.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid1D_5.pdf, id=246, 578.16pt x 433.62pt>
+File: figures/Grid1D_5.pdf Graphic file (type pdf)
+
+<use figures/Grid1D_5.pdf>
+Package pdftex.def Info: figures/Grid1D_5.pdf used on input line 319.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid1D_2.pdf, id=247, 578.16pt x 433.62pt>
+File: figures/Grid1D_2.pdf Graphic file (type pdf)
+
+<use figures/Grid1D_2.pdf>
+Package pdftex.def Info: figures/Grid1D_2.pdf used on input line 323.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid1D_4.pdf, id=248, 578.16pt x 433.62pt>
+File: figures/Grid1D_4.pdf Graphic file (type pdf)
+
+<use figures/Grid1D_4.pdf>
+Package pdftex.def Info: figures/Grid1D_4.pdf used on input line 327.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid1D_6.pdf, id=249, 578.16pt x 433.62pt>
+File: figures/Grid1D_6.pdf Graphic file (type pdf)
+
+<use figures/Grid1D_6.pdf>
+Package pdftex.def Info: figures/Grid1D_6.pdf used on input line 331.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid2D_1.pdf, id=250, 578.16pt x 433.62pt>
+File: figures/Grid2D_1.pdf Graphic file (type pdf)
+
+<use figures/Grid2D_1.pdf>
+Package pdftex.def Info: figures/Grid2D_1.pdf used on input line 383.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid2D_3.pdf, id=251, 578.16pt x 433.62pt>
+File: figures/Grid2D_3.pdf Graphic file (type pdf)
+
+<use figures/Grid2D_3.pdf>
+Package pdftex.def Info: figures/Grid2D_3.pdf used on input line 387.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid2D_5.pdf, id=252, 578.16pt x 433.62pt>
+File: figures/Grid2D_5.pdf Graphic file (type pdf)
+
+<use figures/Grid2D_5.pdf>
+Package pdftex.def Info: figures/Grid2D_5.pdf used on input line 391.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid2D_2.pdf, id=253, 578.16pt x 433.62pt>
+File: figures/Grid2D_2.pdf Graphic file (type pdf)
+
+<use figures/Grid2D_2.pdf>
+Package pdftex.def Info: figures/Grid2D_2.pdf used on input line 395.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid2D_4.pdf, id=254, 578.16pt x 433.62pt>
+File: figures/Grid2D_4.pdf Graphic file (type pdf)
+
+<use figures/Grid2D_4.pdf>
+Package pdftex.def Info: figures/Grid2D_4.pdf used on input line 399.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+ <figures/Grid2D_6.pdf, id=255, 578.16pt x 433.62pt>
+File: figures/Grid2D_6.pdf Graphic file (type pdf)
+
+<use figures/Grid2D_6.pdf>
+Package pdftex.def Info: figures/Grid2D_6.pdf used on input line 403.
+(pdftex.def)             Requested size: 115.62994pt x 86.72246pt.
+
+Overfull \hbox (10.80238pt too wide) in paragraph at lines 410--411
+[]\OT1/cmr/bx/it/10 Method1 (Pear-son Product-moment Cor-re-la-tion Co-ef-fi-ci
+ent, PCC)\OT1/cmr/m/n/10 : Pear-son product-
+ []
+
+[6 <./figures/Grid1D_1.pdf> <./figures/Grid1D_3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid1D_3.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid1D_5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid1D_5.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid1D_2.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid1D_2.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid1D_4.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid1D_4.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid1D_6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid1D_6.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] <figures/ExpRan5000_2.pdf, id=455, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_2.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_2.pdf>
+Package pdftex.def Info: figures/ExpRan5000_2.pdf used on input line 455.
+(pdftex.def)             Requested size: 202.35902pt x 151.76927pt.
+
+<figures/ExpRan5000_3.pdf, id=456, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_3.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_3.pdf>
+Package pdftex.def Info: figures/ExpRan5000_3.pdf used on input line 459.
+(pdftex.def)             Requested size: 202.35902pt x 151.76927pt.
+ [7 <./figures/Grid2D_1.pdf> <./figures/Grid2D_3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid2D_3.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid2D_5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid2D_5.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid2D_2.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid2D_2.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid2D_4.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid2D_4.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./figures/Grid2D_6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Grid2D_6.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] [8 <./figures/ExpRan5000_2.pdf> <./figures/ExpRan5000_3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_3.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>] [9] [10] <figures/ExpRan5000_4.pdf, id=759, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_4.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_4.pdf>
+Package pdftex.def Info: figures/ExpRan5000_4.pdf used on input line 568.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_6.pdf, id=760, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_6.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_6.pdf>
+Package pdftex.def Info: figures/ExpRan5000_6.pdf used on input line 572.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_8.pdf, id=761, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_8.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_8.pdf>
+Package pdftex.def Info: figures/ExpRan5000_8.pdf used on input line 576.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_5.pdf, id=762, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_5.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_5.pdf>
+Package pdftex.def Info: figures/ExpRan5000_5.pdf used on input line 580.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_7.pdf, id=763, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_7.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_7.pdf>
+Package pdftex.def Info: figures/ExpRan5000_7.pdf used on input line 584.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_9.pdf, id=764, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_9.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_9.pdf>
+Package pdftex.def Info: figures/ExpRan5000_9.pdf used on input line 588.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_11.pdf, id=765, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_11.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_11.pdf>
+Package pdftex.def Info: figures/ExpRan5000_11.pdf used on input line 592.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_12.pdf, id=766, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_12.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_12.pdf>
+Package pdftex.def Info: figures/ExpRan5000_12.pdf used on input line 596.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRan5000_13.pdf, id=767, 578.16pt x 433.62pt>
+File: figures/ExpRan5000_13.pdf Graphic file (type pdf)
+
+<use figures/ExpRan5000_13.pdf>
+Package pdftex.def Info: figures/ExpRan5000_13.pdf used on input line 600.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_4.pdf, id=768, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_4.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_4.pdf>
+Package pdftex.def Info: figures/ExpRew5000_4.pdf used on input line 610.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_6.pdf, id=769, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_6.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_6.pdf>
+Package pdftex.def Info: figures/ExpRew5000_6.pdf used on input line 614.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_8.pdf, id=770, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_8.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_8.pdf>
+Package pdftex.def Info: figures/ExpRew5000_8.pdf used on input line 618.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_5.pdf, id=771, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_5.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_5.pdf>
+Package pdftex.def Info: figures/ExpRew5000_5.pdf used on input line 622.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_7.pdf, id=772, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_7.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_7.pdf>
+Package pdftex.def Info: figures/ExpRew5000_7.pdf used on input line 626.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_9.pdf, id=773, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_9.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_9.pdf>
+Package pdftex.def Info: figures/ExpRew5000_9.pdf used on input line 630.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_11.pdf, id=774, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_11.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_11.pdf>
+Package pdftex.def Info: figures/ExpRew5000_11.pdf used on input line 634.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_12.pdf, id=775, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_12.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_12.pdf>
+Package pdftex.def Info: figures/ExpRew5000_12.pdf used on input line 638.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/ExpRew5000_13.pdf, id=776, 578.16pt x 433.62pt>
+File: figures/ExpRew5000_13.pdf Graphic file (type pdf)
+
+<use figures/ExpRew5000_13.pdf>
+Package pdftex.def Info: figures/ExpRew5000_13.pdf used on input line 642.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_4.pdf, id=777, 578.16pt x 433.62pt>
+File: figures/SimRan1500_4.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_4.pdf>
+Package pdftex.def Info: figures/SimRan1500_4.pdf used on input line 653.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_6.pdf, id=778, 578.16pt x 433.62pt>
+File: figures/SimRan1500_6.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_6.pdf>
+Package pdftex.def Info: figures/SimRan1500_6.pdf used on input line 657.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_8.pdf, id=779, 578.16pt x 433.62pt>
+File: figures/SimRan1500_8.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_8.pdf>
+Package pdftex.def Info: figures/SimRan1500_8.pdf used on input line 661.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_5.pdf, id=780, 578.16pt x 433.62pt>
+File: figures/SimRan1500_5.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_5.pdf>
+Package pdftex.def Info: figures/SimRan1500_5.pdf used on input line 665.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_7.pdf, id=781, 578.16pt x 433.62pt>
+File: figures/SimRan1500_7.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_7.pdf>
+Package pdftex.def Info: figures/SimRan1500_7.pdf used on input line 669.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_9.pdf, id=782, 578.16pt x 433.62pt>
+File: figures/SimRan1500_9.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_9.pdf>
+Package pdftex.def Info: figures/SimRan1500_9.pdf used on input line 673.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_11.pdf, id=783, 578.16pt x 433.62pt>
+File: figures/SimRan1500_11.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_11.pdf>
+Package pdftex.def Info: figures/SimRan1500_11.pdf used on input line 677.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_12.pdf, id=784, 578.16pt x 433.62pt>
+File: figures/SimRan1500_12.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_12.pdf>
+Package pdftex.def Info: figures/SimRan1500_12.pdf used on input line 681.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/SimRan1500_13.pdf, id=785, 578.16pt x 433.62pt>
+File: figures/SimRan1500_13.pdf Graphic file (type pdf)
+
+<use figures/SimRan1500_13.pdf>
+Package pdftex.def Info: figures/SimRan1500_13.pdf used on input line 685.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_4.pdf, id=786, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_4.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_4.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_4.pdf used on input line 696.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_6.pdf, id=787, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_6.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_6.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_6.pdf used on input line 700.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_8.pdf, id=788, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_8.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_8.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_8.pdf used on input line 704.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_5.pdf, id=789, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_5.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_5.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_5.pdf used on input line 708.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_7.pdf, id=790, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_7.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_7.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_7.pdf used on input line 712.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_9.pdf, id=791, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_9.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_9.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_9.pdf used on input line 716.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_11.pdf, id=792, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_11.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_11.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_11.pdf used on input line 720.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_12.pdf, id=793, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_12.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_12.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_12.pdf used on input line 724.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+
+<figures/Sim3Rew1000_13.pdf, id=794, 578.16pt x 433.62pt>
+File: figures/Sim3Rew1000_13.pdf Graphic file (type pdf)
+
+<use figures/Sim3Rew1000_13.pdf>
+Package pdftex.def Info: figures/Sim3Rew1000_13.pdf used on input line 728.
+(pdftex.def)             Requested size: 138.76123pt x 104.07092pt.
+ [11 <./figures/ExpRan5000_4.pdf> <./figures/ExpRan5000_6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_6.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRan5000_8.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_8.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRan5000_5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_5.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRan5000_7.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_7.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRan5000_9.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_9.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRan5000_11.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_11.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/ExpRan5000_12.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_12.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/ExpRan5000_13.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRan5000_13.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [12 <./figures/ExpRew5000_4.pdf> <./figures/ExpRew5000_6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_6.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRew5000_8.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_8.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRew5000_5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_5.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRew5000_7.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_7.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRew5000_9.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_9.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/ExpRew5000_11.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_11.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/ExpRew5000_12.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_12.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/ExpRew5000_13.pdf
+
+pdfTeX warning: pdflatex (file ./figures/ExpRew5000_13.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [13 <./figures/SimRan1500_4.pdf> <./figures/SimRan1500_6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_6.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/SimRan1500_8.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_8.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/SimRan1500_5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_5.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/SimRan1500_7.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_7.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/SimRan1500_9.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_9.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./figures/SimRan1500_11.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_11.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/SimRan1500_12.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_12.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/SimRan1500_13.pdf
+
+pdfTeX warning: pdflatex (file ./figures/SimRan1500_13.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [14 <./figures/Sim3Rew1000_4.pdf> <./figures/Sim3Rew1000_6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_6.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_8.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_8.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_5.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_7.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_7.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_9.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_9.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_11.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_11.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_12.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_12.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./figures/Sim3Rew1000_13.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Sim3Rew1000_13.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>] [15] (./Apr20_Journal.bbl) [16] (./Apr20_Journal.aux) ) 
+Here is how much of TeX's memory you used:
+ 4496 strings out of 493117
+ 69561 string characters out of 6135433
+ 138402 words of memory out of 5000000
+ 7805 multiletter control sequences out of 15000+600000
+ 17157 words of font info for 65 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,18n,38p,1187b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb>
+Output written on Apr20_Journal.pdf (17 pages, 7885724 bytes).
+PDF statistics:
+ 2182 PDF objects out of 2487 (max. 8388607)
+ 734 compressed objects within 8 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+

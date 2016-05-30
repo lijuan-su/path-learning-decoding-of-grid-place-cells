@@ -1,0 +1,641 @@
+\documentclass[11pt, letterpaper, onecolumn]{article}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{fixltx2e}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{jneurosci}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algcompatible}% http://ctan.org/pkg/algorithmicx
+\algnewcommand\algorithmicreturn{\textbf{return}}
+\algnewcommand\RETURN{\State \algorithmicreturn}%
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\textheight 9in
+\textwidth 6.5in
+\topmargin 0in % Length of margin at top of page above all printing. 1 inch is added to this value. 
+\headheight 0in
+\headsep 0in % Distance from bottom of header to the body of text on a page. 
+\oddsidemargin 0in
+\evensidemargin 0in
+\marginparsep 0in
+\marginparwidth 0in
+\footskip 0.5in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newfont{\bbb}{msbm10 scaled 500}
+\newcommand{\CCC}{\mbox{\bbb C}}
+\newfont{\bb}{msbm10 scaled 1100}
+\newcommand{\CC}{\mbox{\bb C}}
+\newcommand{\RR}{\mbox{\bb R}}
+\newcommand{\ZZ}{\mbox{\bb Z}}
+\newcommand{\FF}{\mbox{\bb F}}
+\newcommand{\GG}{\mbox{\bb G}}
+\newcommand{\EE}{\mbox{\bb E}}
+\newcommand{\NN}{\mbox{\bb N}}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\Prob}{\textrm{Pr}}
+
+% Vectors
+
+\newcommand{\av}{{\bf a}}
+\newcommand{\bv}{{\bf b}}
+\newcommand{\cv}{{\bf c}}
+\newcommand{\dv}{{\bf d}}
+\newcommand{\ev}{{\bf e}}
+\newcommand{\fv}{{\bf f}}
+\newcommand{\gv}{{\bf g}}
+\newcommand{\hv}{{\bf h}}
+\newcommand{\iv}{{\bf i}}
+\newcommand{\jv}{{\bf j}}
+\newcommand{\kv}{{\bf k}}
+\newcommand{\lv}{{\bf l}}
+\newcommand{\mv}{{\bf m}}
+\newcommand{\nv}{{\bf n}}
+\newcommand{\ov}{{\bf o}}
+\newcommand{\pv}{{\bf p}}
+\newcommand{\qv}{{\bf q}}
+\newcommand{\rv}{{\bf r}}
+\newcommand{\sv}{{\bf s}}
+\newcommand{\tv}{{\bf t}}
+\newcommand{\uv}{{\bf u}}
+\newcommand{\wv}{{\bf w}}
+\newcommand{\vv}{{\bf v}}
+\newcommand{\xv}{{\bf x}}
+\newcommand{\yv}{{\bf y}}
+\newcommand{\zv}{{\bf z}}
+\newcommand{\zerov}{{\bf 0}}
+\newcommand{\onev}{{\bf 1}}
+
+% Matrices
+
+\newcommand{\Am}{{\bf A}}
+\newcommand{\Bm}{{\bf B}}
+\newcommand{\Cm}{{\bf C}}
+\newcommand{\Dm}{{\bf D}}
+\newcommand{\Em}{{\bf E}}
+\newcommand{\Fm}{{\bf F}}
+\newcommand{\Gm}{{\bf G}}
+\newcommand{\Hm}{{\bf H}}
+\newcommand{\Id}{{\bf I}}
+\newcommand{\Jm}{{\bf J}}
+\newcommand{\Km}{{\bf K}}
+\newcommand{\Lm}{{\bf L}}
+\newcommand{\Mm}{{\bf M}}
+\newcommand{\Nm}{{\bf N}}
+\newcommand{\Om}{{\bf O}}
+\newcommand{\Pm}{{\bf P}}
+\newcommand{\Qm}{{\bf Q}}
+\newcommand{\Rm}{{\bf R}}
+\newcommand{\Sm}{{\bf S}}
+\newcommand{\Tm}{{\bf T}}
+\newcommand{\Um}{{\bf U}}
+\newcommand{\Wm}{{\bf W}}
+\newcommand{\Vm}{{\bf V}}
+\newcommand{\Xm}{{\bf X}}
+\newcommand{\Ym}{{\bf Y}}
+\newcommand{\Zm}{{\bf Z}}
+
+% Calligraphic
+
+\newcommand{\Ac}{{\cal A}}
+\newcommand{\Bc}{{\cal B}}
+\newcommand{\Cc}{{\cal C}}
+\newcommand{\Dc}{{\cal D}}
+\newcommand{\Ec}{{\cal E}}
+\newcommand{\Fc}{{\cal F}}
+\newcommand{\Gc}{{\cal G}}
+\newcommand{\Hc}{{\cal H}}
+\newcommand{\Ic}{{\cal I}}
+\newcommand{\Jc}{{\cal J}}
+\newcommand{\Kc}{{\cal K}}
+\newcommand{\Lc}{{\cal L}}
+\newcommand{\Mc}{{\cal M}}
+\newcommand{\Nc}{{\cal N}}
+\newcommand{\Oc}{{\cal O}}
+\newcommand{\Pc}{{\cal P}}
+\newcommand{\Qc}{{\cal Q}}
+\newcommand{\Rc}{{\cal R}}
+\newcommand{\Sc}{{\cal S}}
+\newcommand{\Tc}{{\cal T}}
+\newcommand{\Uc}{{\cal U}}
+\newcommand{\Wc}{{\cal W}}
+\newcommand{\Vc}{{\cal V}}
+\newcommand{\Xc}{{\cal X}}
+\newcommand{\Yc}{{\cal Y}}
+\newcommand{\Zc}{{\cal Z}}
+
+% Bold greek letters
+
+\newcommand{\alphav}{\hbox{\boldmath$\alpha$}}
+\newcommand{\betav}{\hbox{\boldmath$\beta$}}
+\newcommand{\gammav}{\hbox{\boldmath$\gamma$}}
+\newcommand{\deltav}{\hbox{\boldmath$\delta$}}
+\newcommand{\etav}{\hbox{\boldmath$\eta$}}
+\newcommand{\lambdav}{\hbox{\boldmath$\lambda$}}
+\newcommand{\epsilonv}{\hbox{\boldmath$\epsilon$}}
+\newcommand{\nuv}{\hbox{\boldmath$\nu$}}
+\newcommand{\muv}{\hbox{\boldmath$\mu$}}
+\newcommand{\zetav}{\hbox{\boldmath$\zeta$}}
+\newcommand{\phiv}{\hbox{\boldmath$\phi$}}
+\newcommand{\psiv}{\hbox{\boldmath$\psi$}}
+\newcommand{\thetav}{\hbox{\boldmath$\theta$}}
+\newcommand{\tauv}{\hbox{\boldmath$\tau$}}
+\newcommand{\omegav}{\hbox{\boldmath$\omega$}}
+\newcommand{\xiv}{\hbox{\boldmath$\xi$}}
+\newcommand{\sigmav}{\hbox{\boldmath$\sigma$}}
+\newcommand{\piv}{\hbox{\boldmath$\pi$}}
+\newcommand{\rhov}{\hbox{\boldmath$\rho$}}
+
+\newcommand{\Gammam}{\hbox{\boldmath$\Gamma$}}
+\newcommand{\Lambdam}{\hbox{\boldmath$\Lambda$}}
+\newcommand{\Deltam}{\hbox{\boldmath$\Delta$}}
+\newcommand{\Sigmam}{\hbox{\boldmath$\Sigma$}}
+\newcommand{\Phim}{\hbox{\boldmath$\Phi$}}
+\newcommand{\Pim}{\hbox{\boldmath$\Pi$}}
+\newcommand{\Psim}{\hbox{\boldmath$\Psi$}}
+\newcommand{\Thetam}{\hbox{\boldmath$\Theta$}}
+\newcommand{\Omegam}{\hbox{\boldmath$\Omega$}}
+\newcommand{\Xim}{\hbox{\boldmath$\Xi$}}
+% Colors
+\definecolor{emph}{rgb}{0.61,0.00,0.00}
+% Highlight Text:
+\newcommand\htext[1]{\textbf{\textcolor{emph}{#1}}}
+%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%To get the title ``references'' to not appear on the bibliography section
+\renewcommand{\refname}{\vspace{-0.25in}}
+\newcounter{task}
+\setcounter{task}{1}
+\newcommand{\task}{Task \#\arabic{task}\addtocounter{task}{1}}
+
+
+\title{Path Learning amd Path Decoding with Grid Cells and Place Cells}
+\author{Lijuan Su, Jean-Marc Fellous and Onur Ozan Koyluoglu}
+\maketitle
+\abstract{}
+
+\newpage
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Mammalian spatial navigation is central to most behaviors and requires an understanding of the environment at multiple spatial scales (refs in humans and rats). How these scales are established during development and how they are used when an animal forages or learns a specific spatial layout are essentially unknown.
+The neural substrate of spatial navigation in the rodent has been extensively studied, and several types of neurons have been found that encode specific features potentially useful for spatial navigation.
+
+Place cells are located in the Hippocampus and have active firing fields at specific locations in 2 dimensional space, called 'place fields' \cite{Keefe:hippocampus78}. Grid cells, on the other hand, are located in the adjacent Medial Entorhinal Cortex(MEC) and they show periodic firing as a function of location. Specifically, a grid cell is activated whenever the animal traverses through any vertex of a regular grid of equilateral triangles that span the environment \cite{Hafting:Microstructure05}. Both grid and place cells are organized from dorsal to ventral levels in increasing spatial field sizes. The size gradient seems to be smooth for place cells (ref), but has been shown to be modular for grid cells (ref). Place and grid cells are functionally reciprocally connected in an ordered fashion, within each level (ref).
+
+Grid cells can be defined by three parameters: spacing, orientation and phase. The spacing of a grid cell can be defined as the distance between the peak points of two neighboring grid fields of a given grid cell. The orientation of a grid cell is the tilt of the grid relative to a reference axis, and the phase is the displacement in the x and y directions relative to an external reference point. In other words, grid cells that belong to the same module share a common spacing and orientation, but their phases differ \cite{Hafting:Microstructure05}.
+
+Together, grid and place cells form a topographical map for navigational tasks \cite{Moser:Place08}. This map can be characterized by a weight matrix, where the entries correspond to synaptic connections between grid and place cells \cite{Burak:Accurate09}. In other words, if we have a network of $ M $ grid and $ N $ place cells, we can use $ M \times M $ Grid-Grid weight matrix,  $ M \times N $ Grid-Place weight matrix, $ M \times M $ Place-Place weight matrix to keep track of all possible synaptic connections. Using Hebbian plasticity rules, these connections can be strengthened or weakened in accordance with the fields visited during behavior. 
+
+A rodent learning a path through specific locations will form three weight matrices (Grid-Grid, Grid-Place, and Place-Place) that could act as a signature for the learned path. In this paper we try to decode the learned path from these learned weight matrices, and compare the decoding results with different grid cell models and different learning rules. With our model, we try to compare the path decoding results from the following configurations:
+
+\begin{itemize}
+    \item Path decoding with only grid cells, only place cells, or grid-place cells together;
+    \item Path decoding with linear or modular grid cell model;
+    \item Path decoding with unsupervised Hebbian or decay Hebbian rules;
+    \item Path decoding with the same or different learning rules for cells from one module and cells from two different modules;
+    \item Does the weight matrix encode the sequences or the frequences of traversed locations along the path? 
+\end{itemize}
+
+
+\section{Models and Methods}
+
+\subsection{Place Cell Models}
+In our model, we consider $N$ place cells with a continuously increasing field size across the ventral axis. Place fields are assumed to have Gaussian tuning curves suggested by \cite{OKeefe:Geometric96}, with the probability density function being
+\begin{equation}
+\label{eq:placeprob}
+f(x,y)=\frac{\exp \left\{ -\frac 1{2(1-\rho ^2)}\left[ \left( \frac{x-\mu _x%
+}{\sigma _x}\right) ^2-2\rho \left( \frac{x-\mu _x}{\sigma _x}\right) \left( 
+\frac{y-\mu _y}{\sigma _y}\right) +\left( \frac{y-\mu _y}{\sigma _y}\right)
+^2\right] \right\} }{2\pi \sigma _x\sigma _y\sqrt{1-\rho ^2}} 
+\end{equation}
+where $(\mu _x,\mu _y)$ is the mean vector and the covariance matrix is
+\begin{equation}
+\left( 
+\begin{array}{cc}
+Var(X) & Cov(X,Y) \\ 
+Cov(X,Y) & Var(Y)
+\end{array}
+\right) =\left( 
+\begin{array}{cc}
+\sigma _x^2 & \rho \sigma _x\sigma _y \\ 
+\rho \sigma _x\sigma _y & \sigma _y^2
+\end{array}
+\right) 
+\end{equation}
+In the model, $ \sigma _x^2 $ and $ \sigma _y^2 $ varies from 50 to 675. $ \sigma _x^2 $ and $ \sigma _y^2 $ defines the field scale and $ \rho \sigma _x\sigma _y $ defines the shape of the field. $ \rho $ is assumed to be 0, which results in circular place fields. Since the result of a Gaussian function never achieves 0, we have clipped the function and assigned the value 0 where the result of the function is less than $ 10^{-1} $. In addition, since larger variance would result in smaller peak firing rates, to eliminate that effect, we normalize each cell with its peak firing value.
+
+\begin{table}[h]
+\centering
+\caption{Place Cell Model Configuration}
+\label{lb:place}
+\begin{tabular}{c|c}
+\hline
+       & range     \\ \hline
+$\mu$  & Random (0-150)      \\ \hline
+$\sigma$ &  Linear (50-625) \\ \hline
+$ N $ & 100 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Grid Cell Models}
+Grid cells, on the other hand, are assumed to consist of three 2-D cosine functions as suggested by \cite{Solstad:From06}, with their gratings oriented at different angles, $ \pi/3 $ apart. There are $M$ grid cells with two model configurations: one is with a continuously increasing field size across the ventral axis; the other is with several discrete field sizes across the ventral axis. The gaps between grid fields increase as the grid field sizes increase, in  accordance with \cite{Brun:Progressive08} and \cite{Hafting:Microstructure05}. Using \cite{Lyttle:Spatial13}, we have derived the grid cell model as follows:
+\begin{equation}
+\label{eq:gridprob}
+G(\sv, \lambda, \theta, \cv) = g\left(\sum_{k=1}^{3} \cos\left(\frac{4\pi}{\sqrt{3\lambda}}\uv(\theta_{k}-\theta)\cdot(\sv-\cv)\right)\right),
+\end{equation}
+
+\begin{equation}
+    \lambda = p1 * sp * sp + p2 * sp + p3 \\
+    % p1 = 0.99760841 \\
+    % p2 = 0.3412051 \\
+    % p3 = -9.06458861 \\
+\end{equation}
+
+where $ \sv=(x,y)$ is the location vector ($1\times 2$ vector in 2D space), $ k $ is the inter-vertex spacing between grid points (in cm), $ \cv = (x_{0},y_{0}) $ is the spatial phase (in cm relative to the origin), $ \uv(\theta_{k})=(\cos(\theta_{k}), \sin(\theta_{k}))$ is a unit vector denoting grid orientation in the direction $ \theta_{k} $. ($\cdot$ denotes the inner product). In the grid cell models, we use $ \theta_{1} = 0 $, $ \theta_{2} = \pi/3 $ and $ \theta_{3} = 2\pi/3 $, and the sum of 3 cosine functions are applied to $ g(x) $, where $ g(x) = \exp(a(x-b))-1 $, and $ a=0.3 $ and $ b=-1.5 $, in accordance with \cite{Almeida:input09}. We normalize each grid cell with its peak value so that the peak firing rate in each grid cell is 1. 
+
+$sp$ is the spacing between two adjacent firing fields of one grid cell, where values of the parameters in equation are: $p1=1.00$, $p2 = 0.34$, and $p3 = -9.06$. In the way, the values of $sp$ are varied between $20$ cm and $120$ cm, similar to the ones used in \cite{Moser:Grid14}.
+
+
+In our experiment, we test two model configurations: one is with a continuously increasing field size across the ventral axis; the other is with several discrete field sizes across the ventral axis. Grid Cell Model configurations are shown in the Table \ref{lb:grid}.
+\begin{table}[h]
+\centering
+\caption{Grid Cell Model Configuration}
+\label{lb:grid}
+\begin{tabular}{c|c|c}
+\hline
+       & Linear      & Modular  \\ \hline
+       Phase $(\sv)$ & Random      & Random  \\ \hline
+       Spacing $(sp)$ & Linear (20cm-120cm)  &  Discrete (38cm,48cm,65cm,98cm) \\ \hline
+       Oritation $(\theta)$ & Random between (0-10)    & Discrete (0,3,6,9)     \\ \hline
+       M & 100 & 100      \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Overlap of the firing fields between different cells}
+The firing fields of different cells maybe overlapped, which is related to the weight connection beween these cells. Here we define the overlap of cell $i$ and cell $j$ on the whole maze. To compare the overlaps for different cell pairs, given the firing fields of $v^i$ and $v^j$, we use three methods to compute one value which represents the overlap of two cells over the whole maze.
+
+Method 1: Compute the Pearson product-moment correlation coefficients of the firing fields of $v^i$ and $v^j$.
+
+Method 2: Sum of the errors of the firing rates of cell $i$ and cell $j$ on the whole maze, i.e the sum of the elements of $o_2^{ij}$.
+\[
+    o_2^{ij} \\
+    = 
+\begin{bmatrix}
+    v^{i}_{11}-v^{j}_{11} & v^{i}_{12}-v^{j}_{12} & \dots  & v^{i}_{1m}-v^{j}_{1m} \\
+    v^{i}_{21}-v^{j}_{21} & v^{i}_{22}-v^{j}_{22} & \dots  & v^{i}_{2m}-v^{j}_{2m} \\
+    \vdots & \vdots & \vdots & \ddots \\
+    v^{i}_{m1}-v^{j}_{m1} & v^{i}_{m2}-v^{j}_{m2} & \dots  & v^{i}_{mm}-v^{j}_{mm} \\
+\end{bmatrix}
+\] \\
+
+Method 3: Sum of the products of the firing rates of cell $i$ and cell $j$ on the whole maze, i.e the sum of the elements of $o_3^{ij}$.
+\[
+    o_3^{ij} \\
+    = 
+\begin{bmatrix}
+    v^{i}_{11}*v^{j}_{11} & v^{i}_{12}*v^{j}_{12} & \dots  & v^{i}_{1m}*v^{j}_{1m} \\
+    v^{i}_{21}*v^{j}_{21} & v^{i}_{22}*v^{j}_{22} & \dots  & v^{i}_{2m}*v^{j}_{2m} \\
+    \vdots & \vdots & \vdots & \ddots \\
+    v^{i}_{m1}*v^{j}_{m1} & v^{i}_{m2}*v^{j}_{m2} & \dots  & v^{i}_{mm}*v^{j}_{mm} \\
+\end{bmatrix}
+\] \\
+where $m$ is the size of the maze, and $v^{i}_{xy}$ means the firing rate of cell $i$ at position $(x,y)$; and $v^{j}_{xy}$ means the firing rate of cell $j$ at position $(x,y)$.
+
+\begin{figure}
+% \labe{fig:overlap}
+\subfigure[Linear Grid Cells and Place Cells]{\includegraphics[width=8cm]{figures/ExpRan5000_2.pdf}}
+\hfill
+\subfigure[Module Grid Cells and Place Cells]{\includegraphics[width=8cm]{figures/ExpRan5000_3.pdf}}
+\hfill
+\caption{Overlap between Cells: Row1 is GG, Row2 is PP, Row3 is GP; Column1 is Method1, Column2 is Method2, Column3 is Method3.}
+\end{figure}
+
+\subsection{Random and Reward Path from Experiment and Simulation}
+Regarding the path that the rat follows, we consider both experimental data and simulation data, each includes random path and reward path. The maze used for collecting experimental data is circular shaped with a radius of 150 cm. For the reward experimental path, within the maze there are three reward locations that the rat is fed when it visits those locations. Hence, once the rat learns the experiment, it does not explore the whole simulation area and tends to traverse the shortest path between reward locations.
+
+For the simulations, we have defined a circular simulation area with radius being 150 cm, and moved our virtual rat within that, in order to be consistent in term of size. Path algorithm explaining the movement of a foraging rat is derived from \cite{Hasselmo:Grid07} and can be summarized by the following equations:
+\begin{equation}
+\label{eq:simple}
+\begin{array}{cc}
+\Delta x(t) = S(1-m)p_{x} + m\Delta x(t-1)\\
+\Delta y(t) = S(1-m)p_{y} + m\Delta y(t-1)
+\end{array}
+\end{equation}
+where $ S = 5 $, $ m = 0.8 $, and $ p_{x}, p_{y} \sim \Nc(0,1) $. This  way, rat's motion heavily depends on its momentum, i.e., it cannot change its direction drastically. To ensure that rat stays within  the boundaries of the simulation area, we use the following formulas
+\begin{equation}
+\begin{array}{cc}
+\Delta x_{r}(t) = - \Delta x(t)\\
+\Delta y_{r}(t) = - \Delta y(t)
+\end{array}
+\end{equation}
+whenever rat initiates a motion towards out of the boundaries, and we basically reflect that motion. 
+% In Figure \ref{fig:gexp} the locations at which the grid cell spikes are superimposed on the experimental trajectory are shown in red. Each red dot corresponds to one spike. Figure \ref{fig:gsim} and \ref{fig:pexp} shows the grid cell spikes on the simulated trajectory and place cell spikes on experimental trajectory, respectively.
+
+The path configurations used in our model are set as Table \ref{lb:path}, in which the experimental data included one random path and one 3-rewards path; and the simulation data included one random path and one 3-rewards path and one 4-rewards path.
+\begin{table}[h]
+\centering
+\caption{Path Configurations}
+\label{lb:path}
+\begin{tabular}{c|c|c}
+\hline
+        & Experiment Path & Simulation Path \\ \hline
+        Random & ExpRan & SimRan \\ \hline
+        3 Rewards & ExpRew3 & SimRew3 \\ \hline
+        4 Rewards & & SimRew4   \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Sequency and Frequency Representation of Path}
+Given one enviorment, there are two representations of one path: one is the sequences of the traversed locations along time; the other is the frequences of all the locations in the environment. In our papaer, we use five pathes to test our model as shown in Figure \ref{fig:path}.
+
+\begin{figure}
+% \labe{fig:path}
+\subfigure[ExpRan Path]{\includegraphics[width=8cm]{figures/ExpRan5000_1.pdf}}
+\hfill
+\subfigure[ExpRew Path]{\includegraphics[width=8cm]{figures/ExpRew5000_1.pdf}}
+\hfill
+\subfigure[Sim3Rew Path]{\includegraphics[width=8cm]{figures/Sim3Rew1000_1.pdf}}
+\hfill
+\subfigure[Sim4Rew Path]{\includegraphics[width=8cm]{figures/Sim4Rew1000_1.pdf}}
+\hfill
+\subfigure[SimRan Path]{\includegraphics[width=8cm]{figures/SimRan1500_1.pdf}}
+\hfill
+\caption{Sequency and Frequeny Representation of Path}
+% \labe{fig:path}
+\end{figure}
+
+\subsection{Neural Connectivity Learning Over Navigational Path}
+
+To acquire some knowledge about the synaptic connectivity of the neurons, we try to obtain the weight matrix between grid and place cells. For that purpose, we started with unsupervised Hebbian rule where the matrix entries $ w_{ij} $s are updated as follows
+\begin{equation}
+\label{eq:weight}
+w_{ij}(t) = w_{ij}(t-1) + \alpha x_{i}(s(t)) x_{j}(s(t))
+\end{equation}
+Here, $ s(t) $ is the stimuli at time $ t $, $ \alpha $ is the learning rate, $ x_{i} $ is the pre-synaptic neuron and $ x_{j} $ is the post-synaptic neuron. $ w_{ij} $s corresponds to synapses, and as a result, when two cells 'fire together they wire together'. As expressed in the Equation \ref{eq:weight}, when both neurons fire with stimuli $ s(t) $, we update both $ w_{ij} $ and $ w_{ji} $, regardless of which neuron fires first. Thus, the resulting weight matrices are symmetric. We start with initializing the matrix with zeros and update the entries at each location on the path.
+
+However, one problem with unsupervised Hebbian rule is that the entries can grow without bounds. To overcome this, we decided to switch to the Hebbian rule with decay and modified our update equation by adding a decay element as follows
+\begin{equation}
+\label{eq:parcali}
+w_{ij}(t) = \begin{cases} 
+     		 w_{ij}(t-1) + \alpha_{ij} x_{i}(s(t)) x_{j}(s(t)) & \mbox{if  } x_{i}(s(t)) \cdot x_{j}(s(t))>0 \\
+     		 w_{ij}(t-1) - \gamma_{ij} x_{i}(s(t)) & \mbox{if  } x_{j}(s(t))=0, x_{i}(s(t)) \geq 0
+  		 	\end{cases}
+\end{equation}
+where $ \gamma_{ij} = \gamma $ is the decay rate. Here, $ \alpha_{ij} $ depends on $ i $ and $ j $ in order to ensure modularity. Because, we found out that when $ \alpha $ is homogeneous across all $ i,j $ pairs, we cannot achieve modularity.
+
+So here, we test two learning rules of the Equation \ref{eq:weight} and Equation \ref{eq:parcali}. Each with three types: continuously increasing grid field size, discrete modular grid field size but the connectivity learning rule is same; and discrete modular grid field size but the connectivity learning rule is different for two cells from the same modular ($\alpha1$, $\gamma1$) and from two different modules ($\alpha2$, $\gamma2$), as shown in Table \ref{lb:hl}. 
+
+\begin{table}[h]
+\centering
+\caption{Unsupervised Hebbian Learning (U-HL) and Decayed Hebbian Learning (D-HL). }
+\label{lb:hl}
+\begin{tabular}{c|c|c|c}
+\hline
+       % & \multicolumn{2}{c}{Linear} & \multicolumn{2}{c}{Modular} \\ \hline
+& Linear      & Module1 & Module2  \\ \hline
+       U-HL &  $\alpha = 0.3$ & $\alpha = 0.3$ & $\alpha1$ = 0.3; $\alpha2$ = 0.03 \\ \hline
+       D-HL &  $\alpha = 0.3$, $\gamma = 0.6$ & $\alpha = 0.3$, $\gamma = 0.6$ & $\alpha1 = 0.3, \gamma1 = 0.6$; $\alpha2 = 0.03, \gamma2 = 0.06$ \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\section{Path Learning and Path Decoding Over Navigational Path}
+
+\subsection{Definition of Weight Matrix on Maze}
+Given the learned weight matrix $W$ from a navigational path, we define the weight-maze to represent the path decoding from the weight matrix.
+\[
+    W \\
+    = 
+\begin{bmatrix}
+    w_{11}       & w_{12} & w_{13} & \dots & w_{1n} \\
+    w_{21}       & w_{22} & w_{23} & \dots & w_{2n} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    w_{n1}       & w_{n2} & w_{n3} & \dots & w_{nn} \\
+\end{bmatrix}
+\] 
+\[
+    o^{ij} \\
+    = 
+\begin{bmatrix}
+    v^{i}_{11}*v^{j}_{11} & v^{i}_{12}*v^{j}_{12} & \dots  & v^{i}_{1m}*v^{j}_{1m} \\
+    v^{i}_{21}*v^{j}_{21} & v^{i}_{22}*v^{j}_{22} & \dots  & v^{i}_{2m}*v^{j}_{2m} \\
+    \vdots & \vdots & \vdots & \ddots \\
+    v^{i}_{m1}*v^{j}_{m1} & v^{i}_{m2}*v^{j}_{m2} & \dots  & v^{i}_{mm}*v^{j}_{mm} \\
+\end{bmatrix}
+\] \\
+\[
+    O = \sum {w_{ij}*o^{ij}}
+\]
+\begin{itemize}
+    \item $W$ is the weight matrix between all the cells;
+    \item $w_{ij}$ is the weight between cell i and cell j;
+    \item $n$ is the number of cells;
+    \item $v_{i}$ is the firing field of cell i on the whole maze;
+    \item $v_{j}$ is the firing field of cell j on the whole maze;
+    \item $o_{ij}$ is the overlap of cell i and cell j on the whole maze;
+    \item $(m*m)$ is the maze size.
+    \item $O$ (weight-maze) is the sum of weighted overlaps of all cells;
+\end{itemize}
+
+
+\subsection{Path Learning and Path Decoding Analysis}
+Given one path, using different hebbian learning rules, the annimal updates the neural connections between grid cells and grid cells (GG), between grid cells and place cells (GP), between place cells to place cells (PP). Here in our paper, we tested two hebbian learning rules: unsupervised hebbian learning rule (U-HL) defined in Equation \ref{eq:weight}; decay hebbian learning rule (D-HL) defined in Equation \ref{eq:parcali}.
+
+The animal learnt three weight matrices from the navigational path, which are GG, GP and PP. For each weight matrix, using the definition of $O$ we can compute the weight-maze which represents the decoded path from the learnt weight matrix.
+
+As shown in Figure \ref{fig:decode}: Fig $a$ is the path learning and path decoding from linear grid cell model with unsupervised hebbian learning rule; Fig $b$ is the path learning and path decoding from linear grid cell model with decay hebbian learning rule; Fig $c$ is the path learning and path decoding from module1 cell model with unsupervised hebbian learning rule; Fig $d$ is the path learning and path decoding from module1 grid cell model with decay hebbian learning rule; Fig $e$ is the path learning and path decoding from module2 grid cell model with unsupervised hebbian learning rule; Fig $f$ is the path learning and path decoding from module2 grid cell model with decay hebbian learning rule. In each subfigure: Row 1 is the learnt weight matrix, Row 2 is the decoded path (weighted-maze) from the corresponding learnt weight matrix; Column 1 means path learning and path decoding with GG, Column 2  means path learning and path decoding with GP, Column 3  means path learning and path decoding with PP.
+
+To compare the decoded path from the weight matrix and the actual path, we compute the similarity between them using three methods, same with the computation of the overlap between the firing fields of two cells. Given the sequences representation of one path, we transform the sequences representations to the frequences representation of the path. And then compare the similarity between the decoded path (weighted-maze) and the freq representation of the actual path.
+
+As shown in Figure \ref{fig:compare}, Fig a is the comparison with Method1, Fig b the comparison with Method2, and Fig c is the comparison with Method3. For each subfigure: group 1 is the Lineared Grid Cells with U-HL; group 2 is the Lineared Grid Cells with D-HL; group 3 is the Module1  Grid Cells with U-HL; group 4 is the Module2 Grid Cells with D-HL; group 5 is the Module2 Grid Cells with U-HL; group 6 is the Module2 Grid Cells with D-HL. For each group, the decoding results (similarity score) are analysed with GG, GP and PP.
+
+
+\section{Conclusion and Discussion}
+In this paper we try to decode the learned path from the learned weight matrices, and compare the decoding results with different grid cell models and different learning rules. From the comparison between the decoded path and the actual path, we try to answer the following questions related to effective path learning and path decoding:
+
+\begin{itemize}
+    \item Which cells are more effective, only grid cells, only place cells, or grid-place cells together?
+    \item Which model is better, linear or modular grid cell model?
+    \item Which learning rule is better, unsupervised or decay Hebbian learning rules?
+    \item Which update strategy is better, the uniformal or different learning rules for cells from one module and cells from two different modules?
+    \item Does the animal remember the sequences or the frequences of traversed locations along the path? 
+\end{itemize}
+
+\newpage
+
+\begin{figure}
+\subfigure[Linear Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/ExpRan5000_4.pdf}}
+\hfill
+\subfigure[Linear Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/ExpRan5000_5.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/ExpRan5000_6.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/ExpRan5000_7.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/ExpRan5000_8.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/ExpRan5000_9.pdf}}
+\hfill
+\caption{Path Learning and Path decoding on ExpRan Path.}
+\label{fig:decode}
+\end{figure}
+
+\begin{figure}
+\subfigure[Method1]{\includegraphics[width=8cm]{figures/ExpRan5000_11.pdf}}
+\hfill
+\subfigure[Method2]{\includegraphics[width=8cm]{figures/ExpRan5000_12.pdf}}
+\hfill
+\subfigure[Method3]{\includegraphics[width=8cm]{figures/ExpRan5000_13.pdf}}
+\hfill
+\caption{Comparison between Decoded Path and Actual Path on ExpRan Path.}
+\label{fig:compare}
+\end{figure}
+
+
+\begin{figure}
+\subfigure[Linear Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/ExpRew5000_4.pdf}}
+\hfill
+\subfigure[Linear Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/ExpRew5000_5.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/ExpRew5000_6.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/ExpRew5000_7.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/ExpRew5000_8.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/ExpRew5000_9.pdf}}
+\hfill
+\caption{Path Learning and Path decoding on ExpRew Path.}
+\end{figure}
+
+\begin{figure}
+\subfigure[Method1]{\includegraphics[width=8cm]{figures/ExpRew5000_11.pdf}}
+\hfill
+\subfigure[Method2]{\includegraphics[width=8cm]{figures/ExpRew5000_12.pdf}}
+\hfill
+\subfigure[Method3]{\includegraphics[width=8cm]{figures/ExpRew5000_13.pdf}}
+\hfill
+\caption{Comparison between Decoded Path and Actual Path on ExpRew Path.}
+\end{figure}
+
+
+\begin{figure}
+\subfigure[Linear Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/Sim3Rew1000_4.pdf}}
+\hfill
+\subfigure[Linear Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/Sim3Rew1000_5.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/Sim3Rew1000_6.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/Sim3Rew1000_7.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/Sim3Rew1000_8.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/Sim3Rew1000_9.pdf}}
+\hfill
+\caption{Path Learning and Path decoding on SimRew3 Path.}
+\end{figure}
+
+\begin{figure}
+\subfigure[Method1]{\includegraphics[width=8cm]{figures/Sim3Rew1000_11.pdf}}
+\hfill
+\subfigure[Method2]{\includegraphics[width=8cm]{figures/Sim3Rew1000_12.pdf}}
+\hfill
+\subfigure[Method3]{\includegraphics[width=8cm]{figures/Sim3Rew1000_13.pdf}}
+\hfill
+\caption{Comparison between Decoded Path and Actual Path on SimRew3 Path.}
+\end{figure}
+
+
+\begin{figure}
+\subfigure[Linear Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/Sim4Rew1000_4.pdf}}
+\hfill
+\subfigure[Linear Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/Sim4Rew1000_5.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/Sim4Rew1000_6.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/Sim4Rew1000_7.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/Sim4Rew1000_8.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/Sim4Rew1000_9.pdf}}
+\hfill
+\caption{Path Learning and Path decoding on SimRew4 Path.}
+\end{figure}
+
+\begin{figure}
+\subfigure[Method1]{\includegraphics[width=8cm]{figures/Sim4Rew1000_11.pdf}}
+\hfill
+\subfigure[Method2]{\includegraphics[width=8cm]{figures/Sim4Rew1000_12.pdf}}
+\hfill
+\subfigure[Method3]{\includegraphics[width=8cm]{figures/Sim4Rew1000_13.pdf}}
+\hfill
+\caption{Comparison between Decoded Path and Actual Path on SimRew4 Path.}
+\end{figure}
+
+
+\begin{figure}
+\subfigure[Linear Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/SimRan1500_4.pdf}}
+\hfill
+\subfigure[Linear Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/SimRan1500_5.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/SimRan1500_6.pdf}}
+\hfill
+\subfigure[Module1 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/SimRan1500_7.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with U-HL]{\includegraphics[width=8cm]{figures/SimRan1500_8.pdf}}
+\hfill
+\subfigure[Module2 Grid Cells with D-HL]{\includegraphics[width=8cm]{figures/SimRan1500_9.pdf}}
+\hfill
+\caption{Path Learning and Path decoding on SimRan Path.}
+\end{figure}
+
+\begin{figure}
+\subfigure[Method1]{\includegraphics[width=8cm]{figures/SimRan1500_11.pdf}}
+\hfill
+\subfigure[Method2]{\includegraphics[width=8cm]{figures/SimRan1500_12.pdf}}
+\hfill
+\subfigure[Method3]{\includegraphics[width=8cm]{figures/SimRan1500_13.pdf}}
+\hfill
+\caption{Comparison between Decoded Path and Actual Path on SimRan Path.}
+\end{figure}
+
+
+\newpage
+\section{References}
+\bibliography{journal}
+\bibliographystyle{jneurosci}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+

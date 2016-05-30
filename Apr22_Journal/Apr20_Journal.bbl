@@ -1,0 +1,73 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Brun  \bgroup et al.\egroup
+  }{2008}]{Brun:Progressive08}
+Brun VH, Solstad T, Kjelstrup KB, Fyhn M, Witter MP, Moser EI, Moser MB (2008)
+\newblock {P}rogressive increase in grid scale from dorsal to ventral medial
+  entorhinal cortex.
+\newblock {\em Hippocampus}~18:\mbox{1200--1212}.
+
+\bibitem[\protect\citeauthoryear{Burak and Fiete}{2009}]{Burak:Accurate09}
+Burak Y, Fiete IR (2009)
+\newblock {A}ccurate path integration in continuous attractor network models of
+  grid cells.
+\newblock {\em PLoS computational biology}~5:\mbox{e1000291}.
+
+\bibitem[\protect\citeauthoryear{de Almeida \bgroup et al.\egroup
+  }{2009}]{Almeida:input09}
+de~Almeida L, Idiart M, Lisman JE (2009)
+\newblock {T}he input--output transformation of the hippocampal granule cells:
+  from grid cells to place fields.
+\newblock {\em The Journal of Neuroscience}~29:\mbox{7504--7512}.
+
+\bibitem[\protect\citeauthoryear{Hafting  \bgroup et al.\egroup
+  }{2005}]{Hafting:Microstructure05}
+Hafting T, Fyhn M, Molden S, Moser MB, Moser EI (2005)
+\newblock {M}icrostructure of a spatial map in the entorhinal cortex.
+\newblock {\em Nature}~436:\mbox{801--806}.
+
+\bibitem[\protect\citeauthoryear{Hasselmo \bgroup et al.\egroup
+  }{2007}]{Hasselmo:Grid07}
+Hasselmo ME, Giocomo LM, Zilli EA (2007)
+\newblock {G}rid cell firing may arise from interference of theta frequency
+  membrane potential oscillations in single neurons.
+\newblock {\em Hippocampus}~17:\mbox{1252--1271}.
+
+\bibitem[\protect\citeauthoryear{Lyttle  \bgroup et al.\egroup
+  }{2013}]{Lyttle:Spatial13}
+Lyttle D, Gereke B, Lin KK, Fellous JM (2013)
+\newblock {S}patial scale and place field stability in a grid-to-place cell
+  model of the dorsoventral axis of the hippocampus.
+\newblock {\em Hippocampus}~23:\mbox{729--744}.
+
+\bibitem[\protect\citeauthoryear{Moser \bgroup et al.\egroup
+  }{2008}]{Moser:Place08}
+Moser EI, Kropff E, Moser MB (2008)
+\newblock {P}lace cells, grid cells, and the brain's spatial representation
+  system.
+\newblock {\em Annu. Rev. Neurosci.}~31:\mbox{69--89}.
+
+\bibitem[\protect\citeauthoryear{Moser  \bgroup et al.\egroup
+  }{2014}]{Moser:Grid14}
+Moser EI, Roudi Y, Witter MP, Kentros C, Bonhoeffer T, Moser MB (2014)
+\newblock {G}rid cells and cortical representation.
+\newblock {\em Nature Reviews Neuroscience}~.
+
+\bibitem[\protect\citeauthoryear{O'Keefe and
+  Burgess}{1996}]{OKeefe:Geometric96}
+O'Keefe J, Burgess N (1996)
+\newblock {G}eometric determinants of the place fields of hippocampal neurons.
+\newblock {\em Nature}~381:\mbox{425--428}.
+
+\bibitem[\protect\citeauthoryear{O'Keefe and Nadel}{1978}]{Keefe:hippocampus78}
+O'Keefe J, Nadel L (1978)
+\newblock {\em {T}he hippocampus as a cognitive map}
+\newblock Clarendon Press Oxford.
+
+\bibitem[\protect\citeauthoryear{Solstad \bgroup et al.\egroup
+  }{2006}]{Solstad:From06}
+Solstad T, Moser EI, Einevoll GT (2006)
+\newblock {F}rom grid cells to place cells: a mathematical model.
+\newblock {\em Hippocampus}~16:\mbox{1026--1031}.
+
+\end{thebibliography}
